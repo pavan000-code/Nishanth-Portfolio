@@ -1,0 +1,15 @@
+INSTRUCTIONS FOR SAVING THE FOUNDER'S PORTRAIT IMAGE
+
+1. Save the black and white portrait image you shared as "founder-portrait.jpg"
+2. Place this file in the "public" folder of your project at:
+   D:\Projects\Web Dev\Nishanth Project\portfolio\public\
+
+This will allow the image to be displayed correctly in the About section of your website.
+
+After saving the image, you can deploy your website again with:
+```
+git add .
+git commit -m "Added founder portrait image"
+git push
+npm run deploy
+``` 
