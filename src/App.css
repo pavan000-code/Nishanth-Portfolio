@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
 
 /* Reset and global styles */
 * {
@@ -16,7 +16,7 @@
   --muted-color: #CCCCCC; /* Light gray */
   --success-color: #28a745;
   --danger-color: #dc3545;
-  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-main: 'Cormorant Garamond', serif;
   --transition: all 0.3s ease;
 }
 
@@ -29,12 +29,13 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--light-color);
   transition: var(--transition);
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--light-color);
+  opacity: 0.8;
 }
 
 .container {
@@ -47,9 +48,9 @@ a:hover {
 .button, button.cta-button, button.submit-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: var(--darker-color);
-  border: none;
+  background-color: transparent;
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
   border-radius: 4px;
   cursor: pointer;
   transition: var(--transition);
@@ -59,7 +60,7 @@ a:hover {
 }
 
 .button:hover, button.cta-button:hover, button.submit-button:hover {
-  background-color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
@@ -69,7 +70,7 @@ a:hover {
   font-size: 2.5rem;
   position: relative;
   padding-bottom: 10px;
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 .section-title::after {
@@ -80,7 +81,7 @@ a:hover {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background-color: var(--primary-color);
+  background-color: var(--light-color);
 }
 
 .section-subtitle {
@@ -117,7 +118,7 @@ a:hover {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 .nav ul {
@@ -142,7 +143,7 @@ a:hover {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: var(--primary-color);
+  background-color: var(--light-color);
   transition: var(--transition);
 }
 
@@ -168,7 +169,7 @@ a:hover {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: var(--primary-color);
+  background: var(--light-color);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -222,7 +223,8 @@ a:hover {
 }
 
 .hero-content .highlight {
-  color: var(--primary-color);
+  color: var(--light-color);
+  font-weight: 700;
 }
 
 .hero-content h3 {
@@ -252,13 +254,32 @@ a:hover {
 
 .about-image {
   flex: 0 0 35%;
+  position: relative;
 }
 
 .about-image img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--light-color);
+}
+
+.founder-caption {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.founder-caption h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--light-color);
+}
+
+.founder-caption p {
+  font-size: 1rem;
+  color: var(--light-color);
+  font-style: italic;
 }
 
 .about-text {
@@ -266,9 +287,10 @@ a:hover {
 }
 
 .about-text h3 {
-  font-size: 1.8rem;
   margin-bottom: 15px;
-  color: var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--light-color);
+  font-weight: 600;
 }
 
 .about-text p {
@@ -292,7 +314,7 @@ a:hover {
 .detail-title {
   font-weight: bold;
   margin-right: 10px;
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 .detail-value {
@@ -313,7 +335,7 @@ a:hover {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-bottom: 60px;
 }
@@ -324,7 +346,7 @@ a:hover {
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
-  border: 1px solid rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -333,19 +355,19 @@ a:hover {
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .service-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
-  line-height: 1;
+  color: var(--light-color);
 }
 
 .service-card h3 {
-  font-size: 1.5rem;
   margin-bottom: 15px;
-  color: var(--primary-color);
+  font-size: 1.3rem;
+  color: var(--light-color);
 }
 
 .service-card p {
@@ -355,10 +377,11 @@ a:hover {
 }
 
 .service-link {
+  color: var(--light-color);
   display: inline-flex;
   align-items: center;
-  align-self: flex-start;
   font-weight: 500;
+  transition: var(--transition);
 }
 
 .service-link span {
@@ -375,7 +398,7 @@ a:hover {
   padding: 40px 20px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 20px;
 }
 
@@ -402,8 +425,8 @@ a:hover {
 .project-filters button {
   padding: 8px 20px;
   background: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 1px solid var(--light-color);
+  color: var(--light-color);
   border-radius: 25px;
   cursor: pointer;
   transition: var(--transition);
@@ -411,7 +434,7 @@ a:hover {
 
 .project-filters button.active,
 .project-filters button:hover {
-  background-color: var(--primary-color);
+  background-color: var(--light-color);
   color: var(--darker-color);
 }
 
@@ -427,13 +450,13 @@ a:hover {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
-  border: 1px solid rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .project-image {
@@ -457,9 +480,9 @@ a:hover {
 }
 
 .project-card h3 {
-  font-size: 1.5rem;
   margin-bottom: 10px;
-  color: var(--primary-color);
+  font-size: 1.3rem;
+  color: var(--light-color);
 }
 
 .project-card p {
@@ -475,12 +498,14 @@ a:hover {
 }
 
 .tag {
-  background-color: rgba(255, 215, 0, 0.1);
-  color: var(--primary-color);
-  padding: 4px 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light-color);
   border-radius: 20px;
   font-size: 0.8rem;
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .project-links {
@@ -490,8 +515,8 @@ a:hover {
 }
 
 .project-links a {
-  padding: 8px 15px;
-  font-size: 0.9rem;
+  margin-right: 15px;
+  color: var(--light-color);
 }
 
 .project-meta {
@@ -510,7 +535,7 @@ a:hover {
 .meta-label {
   font-weight: 600;
   margin-right: 5px;
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 .meta-value {
@@ -534,13 +559,13 @@ a:hover {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skill-category h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: var(--light-color);
 }
 
 .skill-category ul {
@@ -568,7 +593,7 @@ a:hover {
 
 .skill-progress {
   height: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--light-color);
   border-radius: 10px;
   width: 0;
   animation: progressAnimation 1s ease-in-out forwards;
@@ -643,7 +668,7 @@ a:hover {
 
 .form-group label {
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 .form-group input,
@@ -651,7 +676,7 @@ a:hover {
   width: 100%;
   padding: 15px;
   font-size: 1rem;
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   font-family: inherit;
   background-color: rgba(255, 255, 255, 0.05);
@@ -661,7 +686,7 @@ a:hover {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--light-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -669,13 +694,13 @@ a:hover {
   width: 100%;
   padding: 15px;
   font-size: 1rem;
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   font-family: inherit;
   background-color: rgba(255, 255, 255, 0.05);
   color: var(--light-color);
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFD700' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 15px center;
   background-size: 15px;
@@ -684,7 +709,7 @@ a:hover {
 
 .form-group select:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--light-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -712,9 +737,9 @@ a:hover {
 }
 
 .info-item h3 {
-  font-size: 1.3rem;
   margin-bottom: 10px;
-  color: var(--primary-color);
+  font-size: 1.2rem;
+  color: var(--light-color);
 }
 
 .social-links-contact {
@@ -725,15 +750,15 @@ a:hover {
 .social-links-contact a {
   display: inline-block;
   padding: 8px 15px;
-  background-color: rgba(255, 215, 0, 0.1);
-  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light-color);
   border-radius: 4px;
   transition: var(--transition);
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .social-links-contact a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--light-color);
   color: var(--darker-color);
 }
 
@@ -759,8 +784,9 @@ a:hover {
 
 .footer-logo h2 {
   font-size: 1.8rem;
+  font-weight: 700;
   margin-bottom: 10px;
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 .footer-logo p {
@@ -776,9 +802,10 @@ a:hover {
 
 .footer-nav h3,
 .footer-social h3 {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--light-color);
 }
 
 .footer-nav ul {
@@ -795,7 +822,8 @@ a:hover {
 }
 
 .footer-nav ul li a:hover {
-  color: var(--primary-color);
+  color: var(--light-color);
+  opacity: 0.8;
   padding-left: 5px;
 }
 
@@ -810,7 +838,8 @@ a:hover {
 }
 
 .footer .social-links a:hover {
-  color: var(--primary-color);
+  color: var(--light-color);
+  opacity: 0.8;
 }
 
 .footer-bottom {
@@ -930,7 +959,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 .approach-subtitle {
@@ -951,14 +980,14 @@ a:hover {
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
-  border: 1px solid rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: var(--transition);
 }
 
 .approach-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .approach-icon {
@@ -969,8 +998,8 @@ a:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgba(255, 215, 0, 0.1);
-  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light-color);
 }
 
 .approach-icon svg {
@@ -980,7 +1009,7 @@ a:hover {
 
 .approach-item h3 {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--light-color);
   margin-bottom: 15px;
 }
 
@@ -1002,6 +1031,25 @@ a:hover {
   
   .approach-subtitle {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 

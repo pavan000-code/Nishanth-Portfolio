@@ -8,39 +8,51 @@ interface Service {
 const servicesData: Service[] = [
   {
     id: 1,
-    title: "Architectural Design",
-    description: "From concept to completion, we create innovative architectural designs that harmonize with the surrounding environment while meeting functional requirements.",
+    title: "Architecture",
+    description: "Highly experienced Architects, Residential Planners and Urban Planners.",
     icon: "🏛️",
   },
   {
     id: 2,
-    title: "Interior Design",
-    description: "We transform spaces with custom interior designs that reflect your personal style, enhance functionality, and create memorable experiences.",
-    icon: "🪑",
-  },
-  {
-    id: 3,
-    title: "3D Visualization",
-    description: "Experience your design before it's built with our high-quality 3D renderings and virtual walkthroughs, providing a realistic preview of the final result.",
-    icon: "🖼️",
-  },
-  {
-    id: 4,
-    title: "Space Planning",
-    description: "Maximize the potential of your space with our strategic planning solutions that optimize flow, functionality, and aesthetics.",
+    title: "Planning",
+    description: "Interior Design, House Planning, commercial space for best space utilization as per needs.",
     icon: "📐",
   },
   {
+    id: 3,
+    title: "Exterior",
+    description: "Modern Elevations, Aesthetics, Functionality and developing Unique Identity to create long lasting impression.",
+    icon: "🏠",
+  },
+  {
+    id: 4,
+    title: "Interior Planning",
+    description: "Interior Planning, Space Utilization, ventilation safety, ergonomical, all miniature and comprehensive details of colour and lighting.",
+    icon: "🪑",
+  },
+  {
     id: 5,
-    title: "Landscape Design",
-    description: "Create harmonious outdoor environments that complement your architecture with our thoughtful landscape design services.",
-    icon: "🌳",
+    title: "Decoration",
+    description: "Expertise in precise selection of colour, texture, picking of decor and artifacts making your space attractive and memorable.",
+    icon: "🎨",
   },
   {
     id: 6,
-    title: "Sustainable Design",
-    description: "Embrace eco-friendly solutions with our sustainable design approach, integrating energy efficiency and environmentally conscious materials.",
-    icon: "♻️",
+    title: "Theme Selection",
+    description: "The kind of design elements and features you are looking for contemporary, modern fusion of styles, traditional we can do it.",
+    icon: "✨",
+  },
+  {
+    id: 7,
+    title: "Construction",
+    description: "Expertise in Modern construction techniques, efficient, quality materials, sustainability and skilled labour.",
+    icon: "🏗️",
+  },
+  {
+    id: 8,
+    title: "Landscaping",
+    description: "Blending nature into your space with expertise in landscaping with high sustainable approach.",
+    icon: "🌳",
   },
 ];
 

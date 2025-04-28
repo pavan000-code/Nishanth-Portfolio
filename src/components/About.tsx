@@ -1,4 +1,7 @@
 const About = () => {
+  // Get the base URL from the public directory
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <section id="about" className="about-section">
       <div className="container">
@@ -7,9 +10,13 @@ const About = () => {
         <div className="about-content">
           <div className="about-image">
             <img 
-              src="/founder-portrait.jpg" 
+              src={`${baseUrl}Founder Pic.png`}
               alt="The Slab Design Studio Founder" 
             />
+            <div className="founder-caption">
+              <h4>Nishanth Sreemannarayana</h4>
+              <p>Principal Architect and Founder</p>
+            </div>
           </div>
           
           <div className="about-text">
