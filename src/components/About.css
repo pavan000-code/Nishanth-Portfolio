@@ -1,0 +1,145 @@
+.about-section {
+  padding: 100px 0;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.about-image {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+.founder-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: var(--light-color);
+}
+
+.founder-caption h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.founder-caption p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-subtitle {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.about-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-title {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--light-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .about-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-buttons {
+    flex-direction: column;
+  }
+  
+  .button {
+    text-align: center;
+  }
+} 

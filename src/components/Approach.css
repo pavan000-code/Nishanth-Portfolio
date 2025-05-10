@@ -1,0 +1,87 @@
+.approach-section {
+  padding: 100px 0;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--light-color);
+}
+
+.approach-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.approach-tagline {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.approach-subtitle {
+  font-size: 1.2rem;
+  color: var(--light-color);
+  opacity: 0.8;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.approach-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.approach-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.approach-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  color: var(--accent-color);
+}
+
+.approach-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.approach-item-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--light-color);
+}
+
+.approach-item p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .approach-section {
+    padding: 60px 0;
+  }
+  
+  .approach-tagline {
+    font-size: 1.5rem;
+  }
+  
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+} 

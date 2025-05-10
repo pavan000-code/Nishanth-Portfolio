@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import AnimatedHeading from './AnimatedHeading';
+import './Projects.css';
 
 interface Project {
   id: number;
@@ -93,7 +95,10 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <h2 className="section-title">Our Projects</h2>
+        <AnimatedHeading 
+          text="Our Projects" 
+          className="section-title"
+        />
         <p className="section-subtitle">
           Explore our portfolio of award-winning designs across various categories
         </p>
@@ -138,7 +143,11 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} />
               </div>
               <div className="project-content">
-                <h3>{project.title}</h3>
+                <AnimatedHeading 
+                  text={project.title} 
+                  className="project-title"
+                  tag="h3"
+                />
                 <p>{project.description}</p>
                 <div className="project-meta">
                   {project.location && (

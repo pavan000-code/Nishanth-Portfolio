@@ -1,73 +1,153 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Services.css';
-import Architecture from '../assets/Our Services/Architecture.png';
-import Planning from '../assets/Our Services/Planning.png';
-import Exterior from '../assets/Our Services/Exterior.png';
-import Interior from '../assets/Our Services/Interior.png';
-import Decoration from '../assets/Our Services/Decoration.png';
-import Theme from '../assets/Our Services/Theme.png';
-import Construction from '../assets/Our Services/Construction.png';
-import Landscaping from '../assets/Our Services/Landscaping.png';
 
-const Services: React.FC = () => {
+const Services = () => {
+  const [activeService, setActiveService] = useState<number | null>(null);
+
   const services = [
     {
-      title: 'Architecture',
-      description: 'Highly experienced Architects, Residential Planners and Urban Planners.',
-      image: Architecture
+      title: "Residential Architecture",
+      description: "Creating bespoke living spaces that blend functionality with aesthetic excellence. Our residential designs focus on comfort, sustainability, and personal expression.",
+      features: ["Custom Home Design", "Renovations", "Sustainable Living", "Smart Home Integration"]
     },
     {
-      title: 'Planning',
-      description: 'Interior Design, House Planning, commercial space for best space utilization as per needs.',
-      image: Planning
+      title: "Commercial Architecture",
+      description: "Designing innovative commercial spaces that enhance productivity and brand identity. We create environments that inspire and facilitate business success.",
+      features: ["Office Buildings", "Retail Spaces", "Mixed-Use Developments", "Corporate Interiors"]
     },
     {
-      title: 'Exterior',
-      description: 'Modern Elevations, Aesthetics, Functionality and developing Unique Identity to create long lasting impression.',
-      image: Exterior
+      title: "Interior Design",
+      description: "Transforming spaces into harmonious environments that reflect your vision. Our interior designs balance aesthetics with functionality for optimal living and working spaces.",
+      features: ["Space Planning", "Material Selection", "Lighting Design", "Furniture Layout"]
     },
     {
-      title: 'Interior Planning',
-      description: 'Interior Planning, Space Utilization, ventilation safety, ergonomical, all miniature and comprehensive details of colour and lighting.',
-      image: Interior
-    },
-    {
-      title: 'Decoration',
-      description: 'Expertise in precise selection of colour, texture, picking of decor and artifacts making your space attractive and memorable.',
-      image: Decoration
-    },
-    {
-      title: 'Theme Selection',
-      description: 'The kind of design elements and features you are looking for contemporary, modern fusion of styles, traditional we can do it.',
-      image: Theme
-    },
-    {
-      title: 'Construction',
-      description: 'Expertise in Modern construction techniques, efficient, quality materials, sustainability and skilled labour.',
-      image: Construction
-    },
-    {
-      title: 'Landscaping',
-      description: 'Blending nature into your space with expertise in landscaping with high sustainable approach.',
-      image: Landscaping
+      title: "Landscape Architecture",
+      description: "Creating outdoor spaces that connect people with nature. Our landscape designs enhance the environment while providing functional and beautiful outdoor living areas.",
+      features: ["Garden Design", "Urban Planning", "Sustainable Landscaping", "Outdoor Living Spaces"]
     }
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const descriptionVariants = {
+    hidden: { 
+      opacity: 0,
+      height: 0,
+      marginTop: 0
+    },
+    visible: { 
+      opacity: 1,
+      height: "auto",
+      marginTop: 20,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      marginTop: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeIn"
+      }
+    }
+  };
 
   return (
     <section id="services" className="services-section">
       <div className="container">
-        <h2>Our Services</h2>
-        <div className="services-grid">
+        <motion.div 
+          className="section-header"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="section-tagline">Our Expertise</span>
+          <h2 className="section-title">Comprehensive Services</h2>
+          <p className="section-description">
+            We offer a full spectrum of architectural and design services, delivering innovative solutions that transform spaces and enhance lives.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          className="services-list"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <div className="service-image">
-                <img src={service.image} alt={service.title} />
+            <motion.div
+              key={index}
+              className="service-item"
+              variants={itemVariants}
+            >
+              <div 
+                className={`service-header ${activeService === index ? 'active' : ''}`}
+                onClick={() => setActiveService(activeService === index ? null : index)}
+              >
+                <h3 className="service-title">{service.title}</h3>
+                <motion.div 
+                  className="service-icon"
+                  animate={{ rotate: activeService === index ? 45 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  +
+                </motion.div>
               </div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
+              <AnimatePresence>
+                {activeService === index && (
+                  <motion.div
+                    className="service-content"
+                    variants={descriptionVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <p className="service-description">{service.description}</p>
+                    <ul className="service-features">
+                      {service.features.map((feature, idx) => (
+                        <motion.li 
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: idx * 0.1 }}
+                        >
+                          <span className="feature-icon">•</span>
+                          {feature}
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

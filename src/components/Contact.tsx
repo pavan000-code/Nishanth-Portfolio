@@ -1,4 +1,6 @@
 import { useState, FormEvent } from 'react';
+import AnimatedHeading from './AnimatedHeading';
+import './Contact.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +63,10 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <h2 className="section-title">Contact Us</h2>
+        <AnimatedHeading 
+          text="Contact Us" 
+          className="section-title"
+        />
         <p className="section-subtitle">
           Have a project in mind? Get in touch with our design team to discuss your ideas.
         </p>
@@ -157,23 +162,39 @@ const Contact = () => {
           
           <div className="contact-info">
             <div className="info-item">
-              <h3>Our Office</h3>
+              <AnimatedHeading 
+                text="Our Office" 
+                className="info-title"
+                tag="h3"
+              />
               <p>123 Design Street, Suite 101<br />New York, NY 10001</p>
             </div>
             
             <div className="info-item">
-              <h3>Contact Information</h3>
+              <AnimatedHeading 
+                text="Contact Information" 
+                className="info-title"
+                tag="h3"
+              />
               <p><a href="mailto:info@theslabdesignstudio.com">info@theslabdesignstudio.com</a></p>
               <p><a href="tel:+12125551234">+1 (212) 555-1234</a></p>
             </div>
             
             <div className="info-item">
-              <h3>Working Hours</h3>
+              <AnimatedHeading 
+                text="Working Hours" 
+                className="info-title"
+                tag="h3"
+              />
               <p>Monday - Friday: 9am - 6pm<br />Saturday: By appointment<br />Sunday: Closed</p>
             </div>
             
             <div className="info-item">
-              <h3>Connect With Us</h3>
+              <AnimatedHeading 
+                text="Connect With Us" 
+                className="info-title"
+                tag="h3"
+              />
               <div className="social-links-contact">
                 <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a>

@@ -1,11 +1,22 @@
+import React from 'react';
+import AnimatedHeading from './AnimatedHeading';
+import './Approach.css';
+
 const Approach = () => {
   return (
     <section id="approach" className="approach-section">
       <div className="container">
-        <h2 className="section-title">Our Approach</h2>
+        <AnimatedHeading 
+          text="Our Approach" 
+          className="section-title"
+        />
         
         <div className="approach-intro">
-          <h3 className="approach-tagline">EVERY PROJECT IS DIFFERENT.</h3>
+          <AnimatedHeading 
+            text="EVERY PROJECT IS DIFFERENT." 
+            className="approach-tagline"
+            tag="h3"
+          />
           <p className="approach-subtitle">BUT OUR WAY TO APPROACH REMAINS THE SAME.</p>
         </div>
         
@@ -17,7 +28,11 @@ const Approach = () => {
                 <path d="M12 11.25C13.2426 11.25 14.25 10.2426 14.25 9C14.25 7.75736 13.2426 6.75 12 6.75C10.7574 6.75 9.75 7.75736 9.75 9C9.75 10.2426 10.7574 11.25 12 11.25Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Listen</h3>
+            <AnimatedHeading 
+              text="Listen" 
+              className="approach-item-title"
+              tag="h3"
+            />
             <p>We listen to our clients and their need for expertise. We pay close attention what's right and relevant.</p>
           </div>
           
@@ -28,7 +43,11 @@ const Approach = () => {
                 <path d="M19.5 9.75C19.5 15.75 12 21.75 12 21.75C12 21.75 4.5 15.75 4.5 9.75C4.5 7.76088 5.29018 5.85322 6.6967 4.4467C8.10322 3.04018 10.0109 2.25 12 2.25C13.9891 2.25 15.8968 3.04018 17.3033 4.4467C18.7098 5.85322 19.5 7.76088 19.5 9.75Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Empathize</h3>
+            <AnimatedHeading 
+              text="Empathize" 
+              className="approach-item-title"
+              tag="h3"
+            />
             <p>We always put our clients at the center of our strategy so our work can create real benefits for them.</p>
           </div>
           
@@ -41,7 +60,11 @@ const Approach = () => {
                 <path d="M6.75 18.5H5.25C4.15 18.5 3.25 17.6 3.25 16.5V15.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Anticipate</h3>
+            <AnimatedHeading 
+              text="Anticipate" 
+              className="approach-item-title"
+              tag="h3"
+            />
             <p>We think not only about what client says they want, but also how we can anticipate their needs and make the architectural design better.</p>
           </div>
           
@@ -55,7 +78,11 @@ const Approach = () => {
                 <path d="M22 8C22 8 22 9.5 21 11M2 8C2 8 2 9.5 3 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Collaborate</h3>
+            <AnimatedHeading 
+              text="Collaborate" 
+              className="approach-item-title"
+              tag="h3"
+            />
             <p>Great ideas can come from anywhere, so we our team and our partners work together as one team to achieve the best outcome.</p>
           </div>
         </div>
