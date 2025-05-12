@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 /* Reset and global styles */
 * {
@@ -16,7 +16,7 @@
   --muted-color: #666666; /* Dark gray */
   --success-color: #28a745;
   --danger-color: #dc3545;
-  --font-main: 'Cormorant Garamond', serif;
+  --font-main: 'Roboto', sans-serif;
   --transition: all 0.3s ease;
 }
 
@@ -65,29 +65,20 @@ a:hover {
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #000000;
   position: relative;
   padding-bottom: 10px;
-  color: var(--light-color);
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: var(--light-color);
 }
 
 .section-subtitle {
-  text-align: center;
+  text-align: left;
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 0 40px 0;
   font-size: 1.2rem;
   color: var(--light-color);
 }
@@ -125,6 +116,14 @@ a:hover {
   color: var(--light-color);
   text-decoration: none;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
 }
 
 .logo a:hover {
@@ -542,7 +541,7 @@ a:hover {
   position: relative;
   padding: 30px;
   background-color: var(--background-color);
-  border-radius: 8px;
+  border-radius: 0;
   transition: all 0.3s ease;
 }
 
@@ -550,10 +549,10 @@ a:hover {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 30px;
-  right: 30px;
+  left: 0;
+  right: 0;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--light-color);
 }
 
 .service-item:last-child::after {

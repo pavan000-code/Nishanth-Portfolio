@@ -56,42 +56,99 @@
 }
 
 .section-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
+  width: 100%;
+  padding-left: 30px;
+  margin-left: 0;
 }
 
 .section-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: var(--light-color);
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #000000;
+  text-align: left;
+  margin: 0;
+  padding-left: 30px;
+  width: 100%;
 }
 
-.section-subtitle {
+.section-description {
   font-size: 1.2rem;
   color: var(--accent-color);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.section-tagline {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 1;
+}
+
+.service-item {
+  position: relative;
+  padding: 30px 30px 0 30px;
+  background-color: var(--background-color);
+  border-radius: 0;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.service-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--light-color);
+}
+
+.service-item:last-child {
+  padding-bottom: 30px;
+}
+
+.service-item:last-child::after {
+  display: none;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 .service-card {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
+  border-radius: 0;
   padding: 30px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+
+.service-card:not(:last-child) {
+  border-bottom: none;
 }
 
 .service-card:hover {
@@ -121,12 +178,13 @@
 .service-title {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: var(--light-color);
+  color: var(--accent-color);
 }
 
 .service-card p {
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
   line-height: 1.6;
+  color: var(--light-color);
   margin-bottom: 20px;
 }
 
@@ -170,5 +228,9 @@
   
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 20px;
   }
 } 

@@ -55,7 +55,10 @@ const Navbar = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <a href="#home">The Slab Design Studio</a>
+          <a href="#home">
+            <img src="slablogo.png" alt="The Slab Design Studio Logo" className="logo-image" />
+            <span>The Slab Design Studio</span>
+          </a>
         </motion.div>
         
         <motion.div 

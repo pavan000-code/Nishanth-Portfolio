@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Services.css';
 
@@ -86,8 +86,7 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="section-tagline">Our Expertise</span>
-          <h2 className="section-title">Comprehensive Services</h2>
+          <h2 className="section-title">Services</h2>
           <p className="section-description">
             We offer a full spectrum of architectural and design services, delivering innovative solutions that transform spaces and enhance lives.
           </p>

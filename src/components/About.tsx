@@ -1,4 +1,3 @@
-import React from 'react';
 import AnimatedHeading from './AnimatedHeading';
 import './About.css';
 

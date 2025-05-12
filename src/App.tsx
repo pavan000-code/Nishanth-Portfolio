@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
+import Strengths from './components/Strengths'
 import Projects from './components/Projects'
 import Approach from './components/Approach'
 import Contact from './components/Contact'
@@ -46,6 +47,14 @@ function App() {
         transition={{ duration: 0.8 }}
       >
         <Services />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <Strengths />
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}

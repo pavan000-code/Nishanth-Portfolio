@@ -2,16 +2,113 @@
   padding: 100px 0;
   background-color: var(--dark-color);
   color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-left: 30px;
+  margin-left: 0;
 }
 
 .section-title {
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #000000;
+  text-align: left;
+  margin: 0;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  max-width: 600px;
+  margin: 0;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.approach-grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.approach-item {
+  position: relative;
+  padding: 30px 30px 0 30px;
+  background-color: var(--background-color);
+  border-radius: 0;
+  transition: all 0.3s ease;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.approach-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--light-color);
+}
+
+.approach-item:last-child {
+  padding-bottom: 30px;
+}
+
+.approach-item:last-child::after {
+  display: none;
+}
+
+.approach-image {
+  flex: 0 0 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.approach-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.approach-item:hover .approach-image img {
+  transform: scale(1.05);
+}
+
+.approach-content {
+  flex: 1;
+}
+
+.approach-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.approach-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: var(--light-color);
+  margin: 0;
 }
 
 .approach-intro {
-  text-align: center;
+  text-align: left;
   margin-bottom: 60px;
 }
 
@@ -21,55 +118,14 @@
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: left;
 }
 
 .approach-subtitle {
   font-size: 1.2rem;
   color: var(--light-color);
   opacity: 0.8;
-}
-
-.approach-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.approach-item {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  padding: 30px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.approach-item:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.approach-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 20px;
-  color: var(--accent-color);
-}
-
-.approach-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.approach-item-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: var(--light-color);
-}
-
-.approach-item p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -77,11 +133,22 @@
     padding: 60px 0;
   }
   
-  .approach-tagline {
-    font-size: 1.5rem;
+  .section-title {
+    font-size: 2.5rem;
   }
   
-  .approach-grid {
-    grid-template-columns: 1fr;
+  .approach-item {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .approach-image {
+    flex: 0 0 80px;
+    height: 80px;
+    width: 100%;
+  }
+  
+  .approach-title {
+    font-size: 1.5rem;
   }
 } 
