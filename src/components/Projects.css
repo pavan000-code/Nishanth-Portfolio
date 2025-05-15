@@ -1,18 +1,25 @@
 .projects-section {
   padding: 100px 0;
   background-color: var(--dark-color);
-  color: var(--light-color);
+  color: #5c5c5c;
 }
 
 .section-title {
   text-align: left;
   margin-bottom: 20px;
-  color: var(--light-color);
+  color: #000 !important;
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.section-title span {
+  color: #000 !important;
 }
 
 .section-subtitle {
   text-align: left;
-  color: var(--accent-color);
+  color: #5c5c5c;
   max-width: 600px;
   margin: 0 0 50px 0;
   font-size: 1.2rem;
@@ -84,11 +91,11 @@
 .project-title {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: var(--accent-color);
+  color: #000;
 }
 
 .project-card p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #5c5c5c;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -108,14 +115,14 @@
 
 .meta-label {
   font-size: 0.8rem;
-  color: var(--accent-color);
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .meta-value {
   font-size: 0.9rem;
-  color: var(--light-color);
+  color: #5c5c5c;
 }
 
 .project-tags {
@@ -130,7 +137,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   font-size: 0.8rem;
-  color: var(--light-color);
+  color: #5c5c5c;
 }
 
 .project-links {

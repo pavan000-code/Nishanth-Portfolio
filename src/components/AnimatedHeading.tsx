@@ -1,15 +1,18 @@
 import { motion } from 'framer-motion';
+import { CSSProperties } from 'react';
 
 interface AnimatedHeadingProps {
   text: string;
   className?: string;
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  style?: CSSProperties;
 }
 
 const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ 
   text, 
   className = '', 
-  tag: Tag = 'h2' 
+  tag: Tag = 'h2',
+  style
 }) => {
   const letters = Array.from(text);
 
@@ -43,7 +46,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   };
 
   return (
-    <Tag className={className}>
+    <Tag className={className} style={style}>
       <motion.span
         variants={container}
         initial="hidden"

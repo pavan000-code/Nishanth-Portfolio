@@ -96,8 +96,9 @@ const Projects = () => {
     <section id="projects" className="projects-section">
       <div className="container">
         <AnimatedHeading 
-          text="Our Projects" 
+          text="PROJECTS" 
           className="section-title"
+          style={{ color: '#000' }}
         />
         <p className="section-subtitle">
           Explore our portfolio of award-winning designs across various categories

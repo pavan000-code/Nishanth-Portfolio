@@ -1,7 +1,7 @@
 .approach-section {
   padding: 100px 0;
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  background-color: #fff;
+  color: #5c5c5c;
   position: relative;
   overflow: hidden;
 }
@@ -29,82 +29,111 @@
 
 .section-description {
   font-size: 1.2rem;
-  color: var(--accent-color);
+  color: #5c5c5c;
   max-width: 600px;
   margin: 0;
   text-align: left;
   padding-left: 30px;
 }
 
-.approach-grid {
+.approach-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 60px;
+  position: relative;
+}
+
+.approach-step {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
-}
-
-.approach-item {
-  position: relative;
-  padding: 30px 30px 0 30px;
-  background-color: var(--background-color);
-  border-radius: 0;
-  transition: all 0.3s ease;
-  margin: 0;
-  display: flex;
-  gap: 40px;
   align-items: center;
+  position: relative;
+  min-width: 180px;
 }
 
-.approach-item::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: var(--light-color);
-}
-
-.approach-item:last-child {
-  padding-bottom: 30px;
-}
-
-.approach-item:last-child::after {
-  display: none;
-}
-
-.approach-image {
-  flex: 0 0 100px;
-  height: 100px;
-  overflow: hidden;
-}
-
-.approach-image img {
+.approach-step-img-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
-  height: 100%;
+}
+
+.approach-step-img {
+  width: 60px; /* reduced size */
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #000; /* thinner border */
+  background: #fff;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  z-index: 2;
 }
 
-.approach-item:hover .approach-image img {
-  transform: scale(1.05);
+.approach-step-number {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff; /* Ensures number is white */
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  z-index: 3;
+  border: 3px solid #fff;
 }
 
-.approach-content {
-  flex: 1;
+
+.approach-step-line {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: calc(100% + 30px);
+  height: 3px;
+  background: #d1d1d1;
+  z-index: 1;
+  transform: translateY(-50%);
 }
 
-.approach-title {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: var(--accent-color);
+.approach-step-content {
+  margin-top: 30px;
+  text-align: center;
 }
 
-.approach-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--light-color);
-  margin: 0;
+.approach-step-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.approach-step-description {
+  color: #5c5c5c;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 260px;
+}
+
+@media (max-width: 900px) {
+  .approach-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .approach-step-line {
+    display: none;
+  }
 }
 
 .approach-intro {
@@ -132,23 +161,23 @@
   .approach-section {
     padding: 60px 0;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
   }
-  
+
   .approach-item {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .approach-image {
     flex: 0 0 80px;
     height: 80px;
     width: 100%;
   }
-  
+
   .approach-title {
     font-size: 1.5rem;
   }
-} 
+}

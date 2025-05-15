@@ -59,7 +59,7 @@ const Services = () => {
     visible: { 
       opacity: 1,
       height: "auto",
-      marginTop: 20,
+      marginTop: 0,
       transition: {
         duration: 0.5,
         ease: "easeOut"
@@ -86,12 +86,12 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="section-title">Services</h2>
-          <p className="section-description">
+          <h2 className="section-title">SERVICES</h2>
+          <p className="section-description" style={{ color: '#5c5c5c' }}>
             We offer a full spectrum of architectural and design services, delivering innovative solutions that transform spaces and enhance lives.
           </p>
         </motion.div>
-
+        
         <motion.div 
           className="services-list"
           variants={containerVariants}
@@ -127,7 +127,7 @@ const Services = () => {
                     animate="visible"
                     exit="exit"
                   >
-                    <p className="service-description">{service.description}</p>
+                    <p className="service-description" style={{ color: '#5c5c5c' }}>{service.description}</p>
                     <ul className="service-features">
                       {service.features.map((feature, idx) => (
                         <motion.li 
@@ -135,6 +135,7 @@ const Services = () => {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: idx * 0.1 }}
+                          style={{ color: '#5c5c5c' }}
                         >
                           <span className="feature-icon">•</span>
                           {feature}

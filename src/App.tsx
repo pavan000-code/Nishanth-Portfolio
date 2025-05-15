@@ -2,11 +2,10 @@ import './App.css'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import About from './components/About'
 import Services from './components/Services'
-import Strengths from './components/Strengths'
 import Projects from './components/Projects'
 import Approach from './components/Approach'
+import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -38,14 +37,6 @@ function App() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <About />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
         <Services />
       </motion.div>
       <motion.div
@@ -54,7 +45,7 @@ function App() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <Strengths />
+        <Projects />
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -70,7 +61,7 @@ function App() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <Projects />
+        <About />
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}

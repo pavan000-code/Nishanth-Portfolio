@@ -9,7 +9,7 @@ const About = () => {
     <section id="about" className="about-section">
       <div className="container">
         <AnimatedHeading 
-          text="About Us" 
+          text="ABOUT" 
           className="section-title"
         />
         

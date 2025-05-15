@@ -5,7 +5,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color-scheme: dark;
+  --primary-color: #000;
+  --secondary-color: #5c5c5c;
+  --background-color: #fff;
+  --accent-color: #000;
+  --text-color: #5c5c5c;
+  --spacing-unit: 8px;
 }
 
 * {
@@ -21,8 +26,14 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background-color: #121212;
-  color: #FFFFFF;
+  background-color: #fff;
+  color: #5c5c5c;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
 }
 
 ::-webkit-scrollbar {
@@ -30,14 +41,42 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FFD700;
+  background: #888;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FFC107;
+  background: #555;
+}
+
+h1, h2, h3, h4, h5, h6, .section-title, .service-title {
+  color: #000 !important;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+p, span:not(.feature-icon), li, a:not(.nav-link), .description, .content, .text, .section-description, .service-description {
+  color: #5c5c5c !important;
+  line-height: 1.4;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  text-align: left;
+}
+
+/* Override any other text colors */
+p, span, li, a:not(.nav-link), .description, .content, .text {
+  color: #5c5c5c !important;
 }
