@@ -1,4 +1,3 @@
-
 import './Approach.css';
 const baseUrl = import.meta.env.BASE_URL;
 const approaches = [
@@ -37,7 +36,6 @@ const Approach = () => {
             <div className="approach-step" key={idx}>
               <div className="approach-step-img-wrapper">
                 <img src={approach.image} alt={approach.title} className="approach-step-img" />
-                <span className="approach-step-number">{idx + 1}.</span>
                 {idx !== approaches.length - 1 && <div className="approach-step-line"></div>}
               </div>
               <div className="approach-step-content">

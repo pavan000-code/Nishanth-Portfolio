@@ -34,14 +34,12 @@ const Strengths = () => {
     <motion.section 
       id="strengths"
       className="strengths-section"
-      initial={{ opacity: 0, x: -200 }}
+      initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ 
-        duration: 1,
-        type: "spring",
-        stiffness: 50,
-        damping: 15
+        duration: 0.8,
+        ease: "easeOut"
       }}
     >
       <div className="parallax-background"></div>
@@ -67,15 +65,13 @@ const Strengths = () => {
             <motion.div
               key={index}
               className="strength-card"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ 
-                duration: 0.8,
-                type: "spring",
-                stiffness: 50,
-                damping: 15,
-                delay: index * 0.2
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.1
               }}
             >
               <h3 className="strength-title">{strength.title}</h3>
