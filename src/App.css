@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: left;
 }
 
 :root {
@@ -39,10 +40,10 @@ a:hover {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .button, button.cta-button, button.submit-button {
@@ -65,14 +66,14 @@ a:hover {
 }
 
 .section-title {
-  text-align: left;
-  margin-bottom: 20px;
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
   color: #000000;
-  position: relative;
-  padding-bottom: 10px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .section-subtitle {
@@ -245,9 +246,10 @@ a:hover {
   position: relative;
   z-index: 2;
   max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 20px;
+  margin: 0;
+  text-align: left;
+  padding: 0;
+  left: 0;
 }
 
 .hero-subtitle {
@@ -266,6 +268,10 @@ a:hover {
   color: var(--light-color);
   line-height: 1.2;
   letter-spacing: -1px;
+  text-align: left;
+  padding-left: 0;
+  position: relative;
+  left: 0;
 }
 
 .hero-description {
@@ -275,8 +281,10 @@ a:hover {
   line-height: 1.6;
   font-style: italic;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: left;
+  padding-left: 0;
+  position: relative;
+  left: 0;
 }
 
 .hero-buttons {
@@ -496,13 +504,17 @@ a:hover {
 
 /* Services section */
 .services-section {
-  padding: 120px 0;
+  padding: 100px 0;
   background-color: var(--background-color);
 }
 
 .section-header {
-  text-align: center;
-  margin-bottom: 60px;
+  text-align: left;
+  margin: 0 0 60px 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
 }
 
 .section-tagline {
@@ -514,19 +526,13 @@ a:hover {
   display: block;
 }
 
-.section-title {
-  font-size: 3rem;
-  color: var(--text-color);
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
 .section-description {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
+  font-size: 1.2rem;
+  color: #5c5c5c;
   max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  margin: 20px 0 0 0;
+  text-align: left;
+  padding: 0;
 }
 
 .services-list {
@@ -864,7 +870,7 @@ a:hover {
 }
 
 .contact-content p {
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
   font-size: 1.2rem;
   color: var(--light-color);
@@ -1060,7 +1066,7 @@ a:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -1068,6 +1074,7 @@ a:hover {
   opacity: 0.7;
   font-size: 0.9rem;
   color: var(--light-color);
+  text-align: left;
 }
 
 /* Responsive design */
@@ -1316,5 +1323,24 @@ html {
 /* Section transitions */
 section {
   transition: all 0.5s ease-in-out;
+}
+
+/* Update all section containers */
+.services-section,
+.projects-section,
+.about-section,
+.contact-section,
+.approach-section {
+  padding: 100px 0;
+  width: 100%;
+}
+
+.services-section .container,
+.projects-section .container,
+.about-section .container,
+.contact-section .container,
+.approach-section .container {
+  padding: 0;
+  margin: 0;
 }
 
