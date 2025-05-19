@@ -32,26 +32,28 @@
   transform: scale(1.05);
 }
 
-.founder-caption {
+.about-section .founder-caption {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 20px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  color: var(--light-color);
+  color: #ffffff !important;
 }
 
-.founder-caption h4 {
+.about-section .founder-caption h4 {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
+  color: #ffffff !important;
 }
 
-.founder-caption p {
+.about-section .founder-caption p {
   margin: 5px 0 0;
   font-size: 1rem;
   opacity: 0.9;
+  color: #ffffff !important;
 }
 
 .about-text {

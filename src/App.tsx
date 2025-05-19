@@ -6,6 +6,7 @@ import Services from './components/Services'
 import Projects from './components/Projects'
 import Approach from './components/Approach'
 import About from './components/About'
+import Strengths from './components/Strengths'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -62,6 +63,19 @@ function App() {
         transition={{ duration: 0.8 }}
       >
         <About />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ 
+          duration: 0.8,
+          type: "spring",
+          stiffness: 100,
+          damping: 20
+        }}
+      >
+        <Strengths />
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import AnimatedHeading from './AnimatedHeading';
 import './Strengths.css';
 
 const strengths = [
@@ -30,7 +31,19 @@ const strengths = [
 
 const Strengths = () => {
   return (
-    <section className="strengths-section">
+    <motion.section 
+      id="strengths"
+      className="strengths-section"
+      initial={{ opacity: 0, x: -200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ 
+        duration: 1,
+        type: "spring",
+        stiffness: 50,
+        damping: 15
+      }}
+    >
       <div className="parallax-background"></div>
       <div className="floating-shapes">
         <div className="shape shape-1"></div>
@@ -39,28 +52,31 @@ const Strengths = () => {
       </div>
 
       <div className="container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="section-title">Our Strengths</h2>
+        <div className="section-header">
+          <AnimatedHeading 
+            text="STRENGTHS" 
+            className="section-title"
+          />
           <p className="section-description">
             Discover what sets us apart in the world of architecture and design.
           </p>
-        </motion.div>
-
+        </div>
+        
         <div className="strengths-grid">
           {strengths.map((strength, index) => (
             <motion.div
               key={index}
               className="strength-card"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ 
+                duration: 0.8,
+                type: "spring",
+                stiffness: 50,
+                damping: 15,
+                delay: index * 0.2
+              }}
             >
               <h3 className="strength-title">{strength.title}</h3>
               <p>{strength.description}</p>
@@ -68,7 +84,7 @@ const Strengths = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

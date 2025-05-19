@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Approach.css';
 const baseUrl = import.meta.env.BASE_URL;
 const approaches = [
