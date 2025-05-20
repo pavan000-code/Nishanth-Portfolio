@@ -57,7 +57,7 @@ const Navbar = () => {
         >
           <a href="#home">
             <img src="slablogo.png" alt="The Slab Design Studio Logo" className="logo-image" />
-            <span>The Slab Design Studio</span>
+            <span style={{ color: '#000000' }}>The Slab Design Studio</span>
           </a>
         </motion.div>
         

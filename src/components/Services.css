@@ -61,7 +61,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  padding-left: 30px;
+  padding-left: 0;
   margin-left: 0;
 }
 
@@ -72,17 +72,17 @@
   color: #000000;
   text-align: left;
   margin: 0;
-  padding-left: 30px;
+  padding-left: 0;
   width: 100%;
 }
 
-.section-description {
+.services-section .section-description {
   font-size: 1.2rem;
   color: #5c5c5c;
   max-width: 600px;
-  margin: 0;
+  margin: 20px 0 0 0;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 80px !important;
 }
 
 .section-tagline {
@@ -282,7 +282,7 @@
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 60px 20px; /* Keeps content away from screen edges */
+    padding: 60px 20px;
   }
 
   .section-header {
@@ -292,15 +292,15 @@
   }
 
   .section-title {
-    font-size: 1.8rem !important;  /* Reduced from 2.5rem */
+    font-size: 1.8rem !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
     text-align: left;
   }
 
-  .section-description {
-    font-size: 0.95rem !important; /* Slightly smaller for better fit */
-    padding-left: 0 !important;
+  .services-section .section-description {
+    font-size: 0.95rem !important;
+    padding-left: 25px !important;
     margin-left: 0 !important;
     text-align: left;
   }

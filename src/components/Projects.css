@@ -2,15 +2,19 @@
   padding: 100px 0;
   background-color: var(--dark-color);
   color: #5c5c5c;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-title {
   text-align: left;
-  margin-bottom: 20px;
+  margin: 0;
   color: #000 !important;
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
+  padding: 0;
+  width: 100%;
 }
 
 .section-title span {
@@ -21,8 +25,9 @@
   text-align: left;
   color: #5c5c5c;
   max-width: 600px;
-  margin: 0 0 50px 0;
+  margin: 20px 0 0 0;
   font-size: 1.2rem;
+  padding-left: 80px;
 }
 
 .project-filters {
@@ -163,7 +168,21 @@
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: 60px 0;
+    padding: 60px 20px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: left;
+  }
+  
+  .section-subtitle {
+    font-size: 0.95rem !important;
+    padding-left: 25px !important;
+    margin-left: 0 !important;
+    text-align: left;
   }
   
   .project-filters {

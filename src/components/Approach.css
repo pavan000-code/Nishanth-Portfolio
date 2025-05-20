@@ -33,7 +33,7 @@
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding: 0;
+  padding-left: 80px;
 }
 
 .approach-steps {
@@ -51,7 +51,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .approach-step-img-wrapper {
@@ -64,9 +64,9 @@
 }
 
 .approach-step-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
   background: #fff;
   object-fit: cover;
   z-index: 2;
@@ -163,11 +163,21 @@
 
 @media (max-width: 768px) {
   .approach-section {
-    padding: 60px 0;
+    padding: 60px 20px;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 1.8rem !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: left;
+  }
+
+  .section-description {
+    font-size: 0.95rem !important;
+    padding-left: 25px !important;
+    margin-left: 0 !important;
+    text-align: left;
   }
 
   .approach-item {
@@ -175,10 +185,9 @@
     gap: 20px;
   }
 
-  .approach-image {
-    flex: 0 0 80px;
-    height: 80px;
-    width: 100%;
+  .approach-step-img {
+    width: 150px;
+    height: 150px;
   }
 
   .approach-title {

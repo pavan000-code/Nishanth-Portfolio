@@ -6,6 +6,35 @@
   overflow: hidden;
 }
 
+.section-header {
+  text-align: left;
+  margin: 0 0 60px 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #000000;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #5c5c5c;
+  max-width: 600px;
+  margin: 20px 0 0 0;
+  text-align: left;
+  padding-left: 80px;
+}
+
 .about-content {
   display: flex;
   flex-direction: column;
@@ -63,7 +92,7 @@
 .about-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: var(--accent-color);
+  color: #000000;
 }
 
 .about-description {
@@ -88,7 +117,7 @@
 
 .detail-title {
   font-size: 0.9rem;
-  color: var(--accent-color);
+  color: #000000;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -96,6 +125,7 @@
 .detail-value {
   font-size: 1.2rem;
   font-weight: 600;
+  color: #000000;
 }
 
 .about-buttons {
@@ -120,6 +150,31 @@
   transform: translateY(-2px);
 }
 
+.about-subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #000000 !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-subtitle span {
+  color: #000000 !important;
+  text-transform: uppercase;
+}
+
+.about-subtitle span span {
+  color: #000000 !important;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--light-color);
+  margin-bottom: 15px;
+}
+
 @media (max-width: 992px) {
   .about-content {
     grid-template-columns: 1fr;
@@ -133,7 +188,7 @@
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 60px 0;
+    padding: 60px 20px;
   }
   
   .about-details {
@@ -153,17 +208,43 @@
   }
 
   .about-title {
-    font-size: 2rem;
+    font-size: 1.8rem !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: left;
+    color: #000000 !important;
   }
-}
 
-.section-title {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: #000000;
-  text-align: left;
-  margin: 0;
-  padding-left: 30px;
-  width: 100%;
+  .section-title {
+    font-size: 1.8rem !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-align: left;
+  }
+
+  .section-description {
+    font-size: 0.95rem !important;
+    padding-left: 25px !important;
+    margin-left: 0 !important;
+    text-align: left;
+  }
+
+  .about-subtitle {
+    font-size: 1.8rem !important;
+    color: #000000 !important;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  .about-subtitle span {
+    text-transform: uppercase;
+  }
+
+  .about-subtitle span span {
+    text-transform: uppercase;
+  }
+
+  .about-text p {
+    margin-bottom: 12px;
+  }
 } 
