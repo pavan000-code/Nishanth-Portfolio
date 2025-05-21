@@ -65,15 +65,10 @@ function App() {
         <About />
       </motion.div>
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ 
-          duration: 0.8,
-          type: "spring",
-          stiffness: 100,
-          damping: 20
-        }}
+        transition={{ duration: 0.8 }}
       >
         <Strengths />
       </motion.div>

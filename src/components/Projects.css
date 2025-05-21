@@ -6,17 +6,6 @@
   overflow: hidden;
 }
 
-.section-title {
-  text-align: left;
-  margin: 0;
-  color: #000 !important;
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  padding: 0;
-  width: 100%;
-}
-
 .section-title span {
   color: #000 !important;
 }

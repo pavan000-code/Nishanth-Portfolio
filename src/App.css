@@ -19,6 +19,7 @@
   --danger-color: #dc3545;
   --font-main: 'Roboto', sans-serif;
   --transition: all 0.3s ease;
+  --subheading-size: 1.5rem;
 }
 
 body {
@@ -72,8 +73,16 @@ a:hover {
   color: #000000;
   text-align: left;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 100px;
   width: 100%;
+  position: relative;
+  left: 0;
+}
+
+.section-title span {
+  display: inline-block;
+  position: relative;
+  left: 0;
 }
 
 .section-subtitle {
@@ -367,6 +376,36 @@ a:hover {
     padding: 12px 30px;
     font-size: 1rem;
   }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
+  .section-title span {
+    display: inline-block;
+    position: relative;
+    left: 0;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -418,7 +457,7 @@ a:hover {
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding: 0 0 0 80px;
+  padding: 0 0 0 100px;
 }
 
 .about-content {
@@ -575,7 +614,7 @@ a:hover {
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding: 0 0 0 120px;
+  padding: 0 0 0 100px;
   position: relative;
   left: 0;
 }
@@ -702,7 +741,7 @@ a:hover {
 }
 
 .projects-section .container {
-  padding: 0;
+  padding: 0 100px;
   margin: 0;
 }
 
@@ -732,7 +771,7 @@ a:hover {
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding: 0 0 0 80px;
+  padding: 0 0 0 100px;
 }
 
 .project-filters {
@@ -935,12 +974,24 @@ a:hover {
   background-color: var(--dark-color);
 }
 
-.contact-content {
-  max-width: 800px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
+.contact-section .section-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #000000;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.contact-section .section-description {
+  font-size: 1.2rem;
+  color: #5c5c5c;
+  max-width: 600px;
+  margin: 20px 0 0 0;
+  text-align: left;
+  padding: 0 0 0 100px;
 }
 
 @media (min-width: 768px) {
@@ -1237,7 +1288,57 @@ a:hover {
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+  
+  .section-title span {
+    display: inline-block;
+    position: relative;
+    left: 0;
+  }
+  
+  .contact-section .section-header {
+    text-align: left;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .contact-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+  
+  .contact-section .section-title span {
+    display: inline-block;
+    position: relative;
+    left: 0;
+  }
+  
+  .contact-section .section-description {
+    font-size: 0.95rem;
+    padding-left: 25px;
+    margin-left: 0;
+    text-align: left;
   }
   
   .footer-bottom {
@@ -1303,7 +1404,7 @@ a:hover {
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding: 0 0 0 80px;
+  padding: 0 0 0 100px;
 }
 
 .approach-intro {
@@ -1465,7 +1566,8 @@ section {
 .projects-section,
 .about-section,
 .contact-section,
-.approach-section {
+.approach-section,
+.strengths-section {
   padding: 100px 0;
   width: 100%;
 }
@@ -1474,8 +1576,106 @@ section {
 .projects-section .container,
 .about-section .container,
 .contact-section .container,
-.approach-section .container {
-  padding: 0;
+.approach-section .container,
+.strengths-section .container {
+  padding: 0 100px;
   margin: 0;
+}
+
+.contact-section .section-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #000000;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .services-section .container,
+  .projects-section .container,
+  .about-section .container,
+  .contact-section .container,
+  .approach-section .container,
+  .strengths-section .container {
+    padding: 0;
+  }
+
+  .contact-section {
+    padding: 60px 0;
+  }
+
+  .contact-section .container {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+  }
+
+  .contact-section .section-description {
+    font-size: 0.95rem;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+/* Global subheading styles */
+.about-subtitle,
+.strength-title,
+.approach-step-title,
+.service-title,
+.hero-subtitle,
+.section-description {
+  font-size: var(--subheading-size) !important;
+  font-weight: 600;
+  color: #000000 !important;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  text-transform: uppercase !important;
+}
+
+@media (max-width: 768px) {
+  .about-subtitle,
+  .strength-title,
+  .approach-step-title,
+  .service-title,
+  .hero-subtitle,
+  .section-description {
+    font-size: 1.3rem !important;
+  }
 }
 

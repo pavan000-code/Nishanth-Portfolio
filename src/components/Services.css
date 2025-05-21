@@ -1,6 +1,6 @@
 .services-section {
   padding: 100px 0;
-  background-color: #fff;
+  background-color: var(--background-color);
   color: #5c5c5c;
   position: relative;
   overflow: hidden;
@@ -57,32 +57,23 @@
 
 .section-header {
   text-align: left;
-  margin-bottom: 60px;
+  margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
   width: 100%;
-  padding-left: 0;
-  margin-left: 0;
+  padding: 0;
 }
 
-.section-title {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: #000000;
-  text-align: left;
-  margin: 0;
-  padding-left: 0;
-  width: 100%;
-}
-
-.services-section .section-description {
+.section-description {
   font-size: 1.2rem;
-  color: #5c5c5c;
+  color: #666666;
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding-left: 80px !important;
+  padding: 0 0 0 80px;
+  position: relative;
+  left: 0;
+  text-transform: none !important;
 }
 
 .section-tagline {
@@ -141,12 +132,9 @@
 }
 
 .service-title {
-  font-size: 1.5rem;
+  color: var(--text-color);
   margin: 0;
-  padding: 0;
-  color: #000;
-  font-weight: 600;
-  text-align: left;
+  transition: color 0.3s ease;
 }
 
 .service-icon {
@@ -298,11 +286,12 @@
     text-align: left;
   }
 
-  .services-section .section-description {
-    font-size: 0.95rem !important;
+  .section-description {
     padding-left: 25px !important;
     margin-left: 0 !important;
     text-align: left;
+    text-transform: none !important;
+    color: #666666;
   }
 
   .service-item {

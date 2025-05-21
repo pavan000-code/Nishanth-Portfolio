@@ -5,7 +5,7 @@ import './Strengths.css';
 const strengths = [
   {
     title: 'Construction Document Production',
-    description: 'We construction documents are critical for a variety of reasons in the construction process to assure the design intent is clearly and concisely communicated and eventually for maintenance and repairs throughout the life of the structure. To achieve this level of clarity we prepare our documents with close coordination with various consultants, regular meetings and joint reviews and periodic quality control checks from start to completion.'
+    description: 'Construction documents are critical for a variety of reasons in the construction process to assure the design intent is clearly and concisely communicated and eventually for maintenance and repairs throughout the life of the structure. To achieve this level of clarity we prepare our documents with close coordination with various consultants, regular meetings and joint reviews and periodic quality control checks from start to completion.'
   },
   {
     title: 'Construction Administration',
@@ -31,16 +31,9 @@ const strengths = [
 
 const Strengths = () => {
   return (
-    <motion.section 
+    <section 
       id="strengths"
       className="strengths-section"
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ 
-        duration: 0.8,
-        ease: "easeOut"
-      }}
     >
       <div className="parallax-background"></div>
       <div className="floating-shapes">
@@ -65,12 +58,11 @@ const Strengths = () => {
             <motion.div
               key={index}
               className="strength-card"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ 
                 duration: 0.6,
-                ease: "easeOut",
                 delay: index * 0.1
               }}
             >
@@ -80,7 +72,7 @@ const Strengths = () => {
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

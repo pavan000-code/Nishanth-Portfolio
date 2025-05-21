@@ -15,17 +15,6 @@
   padding: 0;
 }
 
-.section-title {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: #000000;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
 .section-description {
   font-size: 1.2rem;
   color: #5c5c5c;
@@ -48,6 +37,9 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 0 0 100px;
 }
 
 .about-image img {
@@ -87,6 +79,7 @@
 
 .about-text {
   flex: 1;
+  padding: 0 0 0 100px;
 }
 
 .about-title {
@@ -151,7 +144,6 @@
 }
 
 .about-subtitle {
-  font-size: 2.5rem;
   margin-bottom: 5px;
   color: #000000 !important;
   font-weight: 700;
@@ -181,8 +173,12 @@
   }
   
   .about-image {
-    max-width: 500px;
+    max-width: 350px;
     margin: 0 auto;
+  }
+
+  .about-text {
+    padding: 0;
   }
 }
 
@@ -195,6 +191,16 @@
     grid-template-columns: 1fr;
   }
   
+  .about-image {
+    max-width: 300px;
+  }
+
+  .about-section .section-description {
+    padding-left: 25px !important;
+    margin-left: 0 !important;
+    text-align: left;
+  }
+
   .about-buttons {
     flex-direction: column;
   }
@@ -208,29 +214,13 @@
   }
 
   .about-title {
-    font-size: 1.8rem !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
     text-align: left;
     color: #000000 !important;
   }
 
-  .section-title {
-    font-size: 1.8rem !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    text-align: left;
-  }
-
-  .section-description {
-    font-size: 0.95rem !important;
-    padding-left: 25px !important;
-    margin-left: 0 !important;
-    text-align: left;
-  }
-
   .about-subtitle {
-    font-size: 1.8rem !important;
     color: #000000 !important;
     margin-bottom: 4px;
     text-transform: uppercase;

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import AnimatedHeading from './AnimatedHeading';
 import './Services.css';
 
 const Services = () => {
@@ -86,9 +87,9 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="section-title">SERVICES</h2>
-          <p className="section-description" style={{ color: '#5c5c5c' }}>
-            We offer a full spectrum of architectural and design services, delivering innovative solutions that transform spaces and enhance lives.
+          <h2 className="section-title">Services</h2>
+          <p className="section-description" style={{ color: '#666666' }}>
+            Comprehensive solutions tailored to your needs
           </p>
         </motion.div>
         

@@ -63,13 +63,15 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <AnimatedHeading 
-          text="Contact Us" 
-          className="section-title"
-        />
-        <p className="section-subtitle">
-          Have a project in mind? Get in touch with our design team to discuss your ideas.
-        </p>
+        <div className="section-header">
+          <AnimatedHeading 
+            text="CONTACT US" 
+            className="section-title"
+          />
+          <p className="section-description">
+            Have a project in mind? Get in touch with our design team to discuss your ideas.
+          </p>
+        </div>
         
         <div className="contact-content">
           <div>
