@@ -5,10 +5,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary-color: #000;
+  --primary-color: #fff;
   --secondary-color: #5c5c5c;
-  --background-color: #fff;
-  --accent-color: #000;
+  --background-color: #000;
+  --accent-color: #fff;
   --text-color: #5c5c5c;
   --spacing-unit: 8px;
 }
@@ -26,7 +26,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  background-color: #fff;
+  background-color: #000;
   color: #5c5c5c;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -41,20 +41,20 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #111;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #333;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #444;
 }
 
 h1, h2, h3, h4, h5, h6, .section-title, .service-title {
-  color: #000 !important;
+  color: #fff !important;
   font-weight: 600;
   margin-bottom: calc(var(--spacing-unit) * 2);
 }

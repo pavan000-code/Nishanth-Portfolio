@@ -1,6 +1,6 @@
 .approach-section {
   padding: 100px 0;
-  background-color: #fff;
+  background-color: #000;
   color: #5c5c5c;
   position: relative;
   overflow: hidden;
@@ -20,7 +20,7 @@
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
-  color: #000000;
+  color: #fff;
   text-align: left;
   margin: 0;
   padding: 0;
@@ -67,7 +67,7 @@
   width: 150px;
   height: 150px;
   border-radius: 0;
-  background: #fff;
+  background: #111;
   z-index: 2;
   object-fit: contain;
 }
@@ -77,8 +77,8 @@
   top: -8px;
   left: 50%;
   transform: translateX(-50%);
-  background: #000;
-  color: #fff; /* Ensures number is white */
+  background: #fff;
+  color: #000;
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -88,9 +88,8 @@
   font-weight: 700;
   font-size: 1rem;
   z-index: 3;
-  border: 3px solid #fff;
+  border: 3px solid #000;
 }
-
 
 .approach-step-line {
   position: absolute;
@@ -98,7 +97,7 @@
   left: 100%;
   width: calc(100% + 30px);
   height: 3px;
-  background: #d1d1d1;
+  background: #333;
   z-index: 1;
   transform: translateY(-50%);
 }

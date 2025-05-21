@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import AnimatedHeading from './AnimatedHeading';
+
 import './Services.css';
 
 const Services = () => {
@@ -89,7 +89,7 @@ const Services = () => {
         >
           <h2 className="section-title">Services</h2>
           <p className="section-description" style={{ color: '#666666' }}>
-            Comprehensive solutions tailored to your needs
+          Comprehensive solutions tailored to your needs
           </p>
         </motion.div>
         

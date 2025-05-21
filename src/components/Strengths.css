@@ -1,6 +1,6 @@
 .strengths-section {
   padding: 100px 0;
-  background-color: var(--dark-color);
+  background-color: #000;
   color: #5c5c5c;
   position: relative;
   overflow: hidden;
@@ -11,7 +11,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0;
-  padding: 0 100px;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
@@ -22,14 +22,14 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 0;
+  padding: 0 0 0 100px;
 }
 
 .strengths-section .section-title {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
-  color: #000000;
+  color: #fff;
   text-align: left;
   margin: 0;
   padding: 0;
@@ -40,13 +40,15 @@
 
 .strengths-section .section-description {
   font-size: 1.2rem;
-  color: #5c5c5c;
+  color: #5c5c5c !important;
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding: 0 0 0 80px;
+  padding: 0;
   position: relative;
   left: 0;
+  text-transform: none !important;
+  font-weight: normal !important;
 }
 
 .parallax-background {
@@ -126,7 +128,7 @@
 }
 
 .strength-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #111;
   border-radius: 0;
   padding: 30px;
   position: relative;
@@ -143,16 +145,18 @@
 
 .strength-title {
   margin-bottom: 15px;
-  color: #000;
+  color: #fff;
   text-align: left;
 }
 
 .strength-card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #5c5c5c;
+  color: #5c5c5c !important;
   margin-bottom: 20px;
   text-align: left;
+  text-transform: none !important;
+  font-weight: normal !important;
 }
 
 @media (max-width: 768px) {

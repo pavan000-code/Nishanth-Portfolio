@@ -1,13 +1,13 @@
 .projects-section {
   padding: 100px 0;
-  background-color: var(--dark-color);
+  background-color: #000;
   color: #5c5c5c;
   position: relative;
   overflow: hidden;
 }
 
 .section-title span {
-  color: #000 !important;
+  color: #fff !important;
 }
 
 .section-subtitle {
@@ -51,7 +51,7 @@
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #111;
   border-radius: 15px;
   padding: 30px;
   text-align: center;
@@ -60,7 +60,7 @@
 
 .project-card:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.1);
+  background: #1a1a1a;
 }
 
 .project-image {
@@ -85,7 +85,7 @@
 .project-title {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #000;
+  color: #fff;
 }
 
 .project-card p {

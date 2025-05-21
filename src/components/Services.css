@@ -1,6 +1,6 @@
 .services-section {
   padding: 100px 0;
-  background-color: var(--background-color);
+  background-color: #000;
   color: #5c5c5c;
   position: relative;
   overflow: hidden;
@@ -96,7 +96,7 @@
 .service-item {
   position: relative;
   padding: 20px 30px 0 30px;
-  background-color: #fff;
+  background-color: #111;
   border-radius: 0;
   transition: all 0.3s ease;
   margin: 0;
@@ -110,7 +110,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background-color: #eee;
+  background-color: #333;
 }
 
 .service-item:last-child {
@@ -132,14 +132,14 @@
 }
 
 .service-title {
-  color: var(--text-color);
+  color: #fff;
   margin: 0;
   transition: color 0.3s ease;
 }
 
 .service-icon {
   font-size: 1.5rem;
-  color: #000;
+  color: #fff;
   transition: transform 0.3s ease;
   margin: 0;
   padding: 0;
@@ -178,7 +178,7 @@
 }
 
 .feature-icon {
-  color: #000;
+  color: #fff;
   margin-right: 10px;
   font-size: 1.2rem;
   padding: 0;
@@ -187,12 +187,12 @@
 .decorative-line {
   width: 50px;
   height: 2px;
-  background: #000;
+  background: #fff;
   margin: 15px 0;
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #111;
   border-radius: 0;
   padding: 30px;
   transition: all 0.3s ease;
@@ -210,7 +210,7 @@
 
 .service-card:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.1);
+  background: #1a1a1a;
 }
 
 .service-image {

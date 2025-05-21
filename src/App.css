@@ -11,9 +11,9 @@
 :root {
   --primary-color: #FFD700; /* Gold */
   --secondary-color: #FFC107; /* Darker gold */
-  --dark-color: #FFFFFF; /* White */
-  --darker-color: #F5F5F5; /* Light gray */
-  --light-color: #000000; /* Black */
+  --dark-color: #000000; /* Black */
+  --darker-color: #111111; /* Darker black */
+  --light-color: #FFFFFF; /* White */
   --muted-color: #666666; /* Dark gray */
   --success-color: #28a745;
   --danger-color: #dc3545;
@@ -70,10 +70,10 @@ a:hover {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
-  color: #000000;
+  color: var(--light-color);
   text-align: left;
   margin: 0;
-  padding: 0 0 0 100px;
+  padding: 0;
   width: 100%;
   position: relative;
   left: 0;
@@ -123,7 +123,7 @@ a:hover {
 }
 
 .logo a {
-  color: #000000 !important;
+  color: var(--light-color) !important;
   text-decoration: none;
   transition: all 0.3s ease;
   display: flex;
@@ -132,7 +132,7 @@ a:hover {
 }
 
 .logo a span {
-  color: #000000 !important;
+  color: var(--light-color) !important;
 }
 
 .logo-image {
@@ -588,15 +588,41 @@ a:hover {
 .services-section {
   padding: 100px 0;
   background-color: var(--background-color);
+  width: 100%;
 }
 
-.section-header {
+.services-section .container {
+  padding: 0 100px;
+  margin: 0;
+}
+
+.services-section .section-header {
   text-align: left;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
   width: 100%;
   padding: 0;
+}
+
+.services-section .section-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #000000;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.services-section .section-description {
+  font-size: 1.2rem;
+  color: #5c5c5c;
+  max-width: 600px;
+  margin: 20px 0 0 0;
+  text-align: left;
+  padding: 0 0 0 100px;
 }
 
 .section-tagline {
@@ -606,17 +632,6 @@ a:hover {
   color: var(--text-color);
   margin-bottom: 15px;
   display: block;
-}
-
-.section-description {
-  font-size: 1.2rem;
-  color: #5c5c5c;
-  max-width: 600px;
-  margin: 20px 0 0 0;
-  text-align: left;
-  padding: 0 0 0 100px;
-  position: relative;
-  left: 0;
 }
 
 .services-list {
@@ -630,7 +645,7 @@ a:hover {
 .service-item {
   position: relative;
   padding: 30px;
-  background-color: var(--background-color);
+  background-color: var(--darker-color);
   border-radius: 0;
   transition: all 0.3s ease;
 }
@@ -805,12 +820,12 @@ a:hover {
 }
 
 .project-card {
-  background-color: var(--dark-color);
+  background-color: var(--darker-color);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
@@ -915,7 +930,7 @@ a:hover {
 }
 
 .skill-category {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--darker-color);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -1049,10 +1064,10 @@ a:hover {
   width: 100%;
   padding: 15px;
   font-size: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   font-family: inherit;
-  background-color: var(--dark-color);
+  background-color: var(--darker-color);
   color: var(--light-color);
 }
 
@@ -1061,11 +1076,11 @@ a:hover {
 .form-group select:focus {
   outline: none;
   border-color: var(--light-color);
-  background-color: var(--dark-color);
+  background-color: var(--darker-color);
 }
 
 .form-group select option {
-  background-color: var(--dark-color);
+  background-color: var(--darker-color);
   color: var(--light-color);
 }
 
@@ -1578,11 +1593,11 @@ section {
 .contact-section .container,
 .approach-section .container,
 .strengths-section .container {
-  padding: 0 100px;
+  padding: 0;
   margin: 0;
 }
 
-.contact-section .section-title {
+.section-title {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
@@ -1591,6 +1606,19 @@ section {
   margin: 0;
   padding: 0;
   width: 100%;
+  position: relative;
+  left: 0;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #5c5c5c;
+  max-width: 600px;
+  margin: 20px 0 0 0;
+  text-align: left;
+  padding: 0;
+  position: relative;
+  left: 0;
 }
 
 @media (max-width: 768px) {
@@ -1658,8 +1686,7 @@ section {
 .strength-title,
 .approach-step-title,
 .service-title,
-.hero-subtitle,
-.section-description {
+.hero-subtitle {
   font-size: var(--subheading-size) !important;
   font-weight: 600;
   color: #000000 !important;
@@ -1673,9 +1700,15 @@ section {
   .strength-title,
   .approach-step-title,
   .service-title,
-  .hero-subtitle,
-  .section-description {
+  .hero-subtitle {
     font-size: 1.3rem !important;
   }
+}
+
+.strengths-section .section-description,
+.strengths-section .strength-card p {
+  color: #5c5c5c !important;
+  text-transform: none !important;
+  font-weight: normal !important;
 }
 

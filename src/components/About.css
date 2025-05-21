@@ -1,7 +1,7 @@
 .about-section {
   padding: 100px 0;
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  background-color: #000;
+  color: #fff;
   position: relative;
   overflow: hidden;
 }
@@ -85,13 +85,13 @@
 .about-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #000000;
+  color: #fff;
 }
 
 .about-description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--light-color);
+  color: #fff;
   margin-bottom: 30px;
 }
 
@@ -110,7 +110,7 @@
 
 .detail-title {
   font-size: 0.9rem;
-  color: #000000;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -118,7 +118,7 @@
 .detail-value {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #000000;
+  color: #fff;
 }
 
 .about-buttons {
@@ -145,25 +145,25 @@
 
 .about-subtitle {
   margin-bottom: 5px;
-  color: #000000 !important;
+  color: #fff !important;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .about-subtitle span {
-  color: #000000 !important;
+  color: #fff !important;
   text-transform: uppercase;
 }
 
 .about-subtitle span span {
-  color: #000000 !important;
+  color: #fff !important;
   text-transform: uppercase;
 }
 
 .about-text p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--light-color);
+  color: #fff;
   margin-bottom: 15px;
 }
 

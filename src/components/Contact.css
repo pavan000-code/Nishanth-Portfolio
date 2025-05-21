@@ -1,6 +1,6 @@
 .contact-section {
   padding: 100px 0;
-  background-color: var(--dark-color);
+  background-color: #000;
   color: #5c5c5c;
   position: relative;
   overflow: hidden;
@@ -45,17 +45,17 @@
 .form-group label {
   display: block;
   margin-bottom: 8px;
-  color: #000;
+  color: #fff;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: none;
+  background: #111;
+  border: 1px solid #333;
   border-radius: 4px;
-  color: #5c5c5c;
+  color: #fff;
   font-size: 1rem;
 }
 
@@ -113,33 +113,33 @@
 }
 
 .info-item {
-  background: rgba(255, 255, 255, 0.05);
+  background: #111;
   padding: 25px;
   border-radius: 15px;
   text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #333;
 }
 
 .info-title {
-  color: var(--accent-color);
+  color: #fff;
   margin-bottom: 15px;
   font-size: 1.2rem;
 }
 
 .info-item p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #5c5c5c;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
 .info-item a {
-  color: var(--light-color);
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .info-item a:hover {
-  color: var(--accent-color);
+  color: #5c5c5c;
 }
 
 .social-links-contact {
