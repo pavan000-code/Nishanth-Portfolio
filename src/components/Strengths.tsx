@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import AnimatedHeading from './AnimatedHeading';
 import './Strengths.css';
 
 const strengths = [
