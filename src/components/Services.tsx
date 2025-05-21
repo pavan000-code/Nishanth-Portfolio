@@ -88,9 +88,11 @@ const Services = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="section-title">Services</h2>
-          <p className="section-description" style={{ color: '#666666' }}>
-          Comprehensive solutions tailored to your needs
-          </p>
+          <div className="section-description-wrapper">
+            <p className="section-description" style={{ color: '#666666' }}>
+              Comprehensive solutions tailored to your needs
+            </p>
+          </div>
         </motion.div>
         
         <motion.div 
@@ -119,6 +121,7 @@ const Services = () => {
                   +
                 </motion.div>
               </div>
+              
               <AnimatePresence>
                 {activeService === index && (
                   <motion.div
@@ -128,21 +131,23 @@ const Services = () => {
                     animate="visible"
                     exit="exit"
                   >
-                    <p className="service-description" style={{ color: '#5c5c5c' }}>{service.description}</p>
-                    <ul className="service-features">
-                      {service.features.map((feature, idx) => (
-                        <motion.li 
-                          key={idx}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: idx * 0.1 }}
-                          style={{ color: '#5c5c5c' }}
-                        >
-                          <span className="feature-icon">•</span>
-                          {feature}
-                        </motion.li>
-                      ))}
-                    </ul>
+                    <div className="service-description-wrapper">
+                      <div className="service-description" style={{ color: '#5c5c5c' }}>{service.description}</div>
+                      <ul className="service-features">
+                        {service.features.map((feature, idx) => (
+                          <motion.li 
+                            key={idx}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: idx * 0.1 }}
+                            style={{ color: '#5c5c5c' }}
+                          >
+                            <span className="feature-icon">•</span>
+                            {feature}
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>

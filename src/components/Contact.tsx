@@ -64,10 +64,7 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="section-header">
-          <AnimatedHeading 
-            text="CONTACT US" 
-            className="section-title"
-          />
+          <h2 className="section-title">CONTACT US</h2>
           <p className="section-description">
             Have a project in mind? Get in touch with our design team to discuss your ideas.
           </p>

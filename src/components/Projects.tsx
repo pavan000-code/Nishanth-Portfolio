@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AnimatedHeading from './AnimatedHeading';
 import './Projects.css';
+import { motion } from 'framer-motion';
 
 interface Project {
   id: number;
@@ -95,14 +96,18 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <AnimatedHeading 
-          text="PROJECTS" 
-          className="section-title"
-          style={{ color: '#000' }}
-        />
-        <p className="section-subtitle">
-          Explore our portfolio of award-winning designs across various categories
-        </p>
+        <div className="section-header">
+          <h2 className="section-title">PROJECTS</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <p className="section-subtitle">
+              Explore our portfolio of award-winning designs across various categories.
+            </p>
+          </motion.div>
+        </div>
         
         <div className="project-filters">
           <button 

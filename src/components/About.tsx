@@ -8,10 +8,7 @@ const About = () => {
   return (
     <section id="about" className="about-section">
       <div className="container">
-        <AnimatedHeading 
-          text="ABOUT" 
-          className="section-title"
-        />
+        <h2 className="section-title">ABOUT</h2>
         
         <div className="about-content">
           <div className="about-image">

@@ -46,19 +46,19 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   };
 
   return (
-    <Tag className={className} style={{ ...style, display: 'inline-block' }}>
+    <Tag className={className} style={{ ...style, display: 'inline-block', color: '#ffffff' }}>
       <motion.span
         variants={container}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        style={{ display: 'inline-block' }}
+        style={{ display: 'inline-block', color: '#ffffff' }}
       >
         {letters.map((letter, index) => (
           <motion.span
             key={index}
             variants={child}
-            style={{ display: 'inline-block', whiteSpace: 'pre' }}
+            style={{ display: 'inline-block', whiteSpace: 'pre', color: '#ffffff' }}
           >
             {letter === " " ? "\u00A0" : letter}
           </motion.span>

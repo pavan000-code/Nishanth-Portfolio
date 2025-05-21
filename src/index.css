@@ -54,19 +54,19 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .section-title, .service-title {
-  color: #fff !important;
   font-weight: 600;
   margin-bottom: calc(var(--spacing-unit) * 2);
-}
-
-p, span:not(.feature-icon), li, a:not(.nav-link), .description, .content, .text, .section-description, .service-description {
-  color: #5c5c5c !important;
-  line-height: 1.4;
 }
 
 .section-title {
   font-size: 2.5rem;
   margin-bottom: calc(var(--spacing-unit) * 2);
+  color: #fff !important;
+}
+
+p, span:not(.feature-icon), li, a:not(.nav-link), .description, .content, .text, .section-description, .service-description {
+  color: #5c5c5c !important;
+  line-height: 1.4;
 }
 
 .section-description {

@@ -44,10 +44,7 @@ const Strengths = () => {
 
       <div className="container">
         <div className="section-header">
-          <AnimatedHeading 
-            text="STRENGTHS" 
-            className="section-title"
-          />
+          <h2 className="section-title">STRENGTHS</h2>
           <p className="section-description">
             Discover what sets us apart in the world of architecture and design.
           </p>
