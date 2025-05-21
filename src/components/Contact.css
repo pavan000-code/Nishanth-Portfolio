@@ -6,6 +6,32 @@
   overflow: hidden;
 }
 
+.contact-section .container {
+  padding: 0 100px;
+  margin: 0;
+}
+
+.section-header {
+  text-align: left;
+  margin: 0 0 60px 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #666666;
+  max-width: 600px;
+  margin: 20px 0 0 0;
+  text-align: left;
+  padding: 0 0 0 80px;
+  position: relative;
+  left: 0;
+  text-transform: none !important;
+}
+
 .section-title {
   text-align: left;
   margin: 0;
@@ -175,6 +201,10 @@
     padding: 60px 20px;
   }
   
+  .contact-section .container {
+    padding: 0;
+  }
+  
   .contact-info {
     grid-template-columns: 1fr;
   }
@@ -205,9 +235,8 @@
   }
 
   .section-description {
-    font-size: 0.95rem;
-    padding-left: 25px;
-    margin-left: 0;
+    padding-left: 25px !important;
+    margin-left: 0 !important;
     text-align: left;
   }
 } 

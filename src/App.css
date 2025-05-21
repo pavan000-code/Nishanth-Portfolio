@@ -44,7 +44,7 @@ a:hover {
   width: 100%;
   max-width: 1200px;
   margin: 0;
-  padding: 0;
+  padding: 0 100px;
 }
 
 .button, button.cta-button, button.submit-button {
@@ -113,13 +113,16 @@ a:hover {
 
 .header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 100px;
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
+  flex: 0 0 auto;
 }
 
 .logo a {
@@ -142,6 +145,10 @@ a:hover {
 
 .logo a:hover {
   color: var(--accent-color);
+}
+
+.nav {
+  margin-left: auto;
 }
 
 .nav ul {
@@ -405,6 +412,27 @@ a:hover {
 
   .container {
     padding: 0 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header .container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .nav {
+    margin-left: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
 
@@ -1246,7 +1274,7 @@ a:hover {
   .header .container {
     flex-direction: row-reverse;
     align-items: flex-start;
-    padding-top: 0;
+    padding: 0 20px;
   }
 
   .header {
@@ -1287,6 +1315,7 @@ a:hover {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    justify-content: center;
   }
 
   .nav a {
@@ -1593,7 +1622,7 @@ section {
 .contact-section .container,
 .approach-section .container,
 .strengths-section .container {
-  padding: 0;
+  padding: 0 100px;
   margin: 0;
 }
 
@@ -1648,7 +1677,7 @@ section {
   .contact-section .container,
   .approach-section .container,
   .strengths-section .container {
-    padding: 0;
+    padding: 0 20px;
   }
 
   .contact-section {

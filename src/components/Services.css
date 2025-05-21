@@ -6,6 +6,11 @@
   overflow: hidden;
 }
 
+.services-section .container {
+  padding: 0 100px;
+  margin: 0;
+}
+
 .parallax-background {
   position: absolute;
   top: 0;
@@ -96,7 +101,7 @@
 .service-item {
   position: relative;
   padding: 20px 30px 0 30px;
-  background-color: #111;
+  background-color: #000;
   border-radius: 0;
   transition: all 0.3s ease;
   margin: 0;
@@ -132,9 +137,15 @@
 }
 
 .service-title {
-  color: #fff;
+  color: #fff !important;
   margin: 0;
   transition: color 0.3s ease;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.service-header:hover .service-title {
+  opacity: 0.7;
 }
 
 .service-icon {
@@ -192,7 +203,7 @@
 }
 
 .service-card {
-  background: #111;
+  background: #000;
   border-radius: 0;
   padding: 30px;
   transition: all 0.3s ease;
@@ -210,7 +221,7 @@
 
 .service-card:hover {
   transform: translateY(-10px);
-  background: #1a1a1a;
+  background: #111;
 }
 
 .service-image {
@@ -232,10 +243,16 @@
   transform: scale(1.1);
 }
 
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
 .service-card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--light-color);
+  color: #5c5c5c;
   margin-bottom: 20px;
 }
 
@@ -268,9 +285,24 @@
   color: var(--light-color);
 }
 
+.section-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .services-section {
     padding: 60px 20px;
+  }
+
+  .services-section .container {
+    padding: 0;
   }
 
   .section-header {
@@ -284,6 +316,7 @@
     padding-left: 0 !important;
     margin-left: 0 !important;
     text-align: left;
+    color: #fff !important;
   }
 
   .section-description {
@@ -300,5 +333,6 @@
 
   .service-title {
     font-size: 1.1rem;
+    color: #fff !important;
   }
 }

@@ -4,51 +4,32 @@
   color: #5c5c5c;
   position: relative;
   overflow: hidden;
-  width: 100%;
 }
 
 .strengths-section .container {
-  width: 100%;
-  max-width: 1200px;
+  padding: 0 100px;
   margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 1;
 }
 
-.strengths-section .section-header {
+.section-header {
   text-align: left;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 0 0 0 100px;
-}
-
-.strengths-section .section-title {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: #fff;
-  text-align: left;
-  margin: 0;
   padding: 0;
-  width: 100%;
-  position: relative;
-  left: 0;
 }
 
-.strengths-section .section-description {
+.section-description {
   font-size: 1.2rem;
-  color: #5c5c5c !important;
+  color: #666666;
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding: 0;
+  padding: 0 0 0 80px;
   position: relative;
   left: 0;
   text-transform: none !important;
-  font-weight: normal !important;
 }
 
 .parallax-background {
@@ -128,7 +109,7 @@
 }
 
 .strength-card {
-  background: #111;
+  background: #000;
   border-radius: 0;
   padding: 30px;
   position: relative;
@@ -145,8 +126,10 @@
 
 .strength-title {
   margin-bottom: 15px;
-  color: #fff;
+  color: #fff !important;
   text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .strength-card p {
@@ -172,20 +155,7 @@
     padding: 0;
   }
 
-  .strengths-section .section-title {
-    font-size: 2.5rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-    color: #000000;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    position: relative;
-    left: 0;
-  }
-
-  .strengths-section .section-description {
+  .section-description {
     padding-left: 25px !important;
     margin-left: 0 !important;
     text-align: left;
@@ -193,5 +163,10 @@
 
   .strength-card {
     padding: 20px;
+  }
+
+  .strength-title {
+    font-size: 1.3rem;
+    color: #fff !important;
   }
 } 

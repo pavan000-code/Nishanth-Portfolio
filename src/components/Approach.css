@@ -4,7 +4,11 @@
   color: #5c5c5c;
   position: relative;
   overflow: hidden;
-  width: 100%;
+}
+
+.approach-section .container {
+  padding: 0 100px;
+  margin: 0;
 }
 
 .section-header {
@@ -29,11 +33,14 @@
 
 .section-description {
   font-size: 1.2rem;
-  color: #5c5c5c;
+  color: #666666;
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
-  padding-left: 80px;
+  padding: 0 0 0 80px;
+  position: relative;
+  left: 0;
+  text-transform: none !important;
 }
 
 .approach-steps {
@@ -67,9 +74,10 @@
   width: 150px;
   height: 150px;
   border-radius: 0;
-  background: #111;
+  background: #000;
   z-index: 2;
   object-fit: contain;
+  padding: 20px;
 }
 
 .approach-step-number {
@@ -110,7 +118,7 @@
 
 .approach-step-title {
   font-weight: 700;
-  color: #000;
+  color: #fff;
   margin-bottom: 10px;
   text-align: left;
   padding: 0;
@@ -162,6 +170,10 @@
 @media (max-width: 768px) {
   .approach-section {
     padding: 60px 20px;
+  }
+
+  .approach-section .container {
+    padding: 0;
   }
 
   .section-description {
