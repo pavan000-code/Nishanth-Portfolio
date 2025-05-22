@@ -6,10 +6,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --primary-color: #fff;
-  --secondary-color: #5c5c5c;
+  --secondary-color: #808080;
   --background-color: #000;
   --accent-color: #fff;
-  --text-color: #5c5c5c;
+  --text-color: #808080;
   --spacing-unit: 8px;
 }
 
@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: #000;
-  color: #5c5c5c;
+  color: #808080;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6, .section-title, .service-title {
 }
 
 p, span:not(.feature-icon), li, a:not(.nav-link), .description, .content, .text, .section-description, .service-description {
-  color: #5c5c5c !important;
+  color: #808080 !important;
   line-height: 1.4;
 }
 
@@ -78,5 +78,5 @@ p, span:not(.feature-icon), li, a:not(.nav-link), .description, .content, .text,
 
 /* Override any other text colors */
 p, span, li, a:not(.nav-link), .description, .content, .text {
-  color: #5c5c5c !important;
+  color: #808080 !important;
 }

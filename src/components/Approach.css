@@ -1,7 +1,7 @@
 .approach-section {
   padding: 100px 0;
   background-color: #000;
-  color: #5c5c5c;
+  color: #808080;
   position: relative;
   overflow: hidden;
 }
@@ -33,7 +33,7 @@
 
 .section-description {
   font-size: 1.2rem !important;
-  color: #666666 !important;
+  color: #808080 !important;
   max-width: 600px !important;
   margin: 20px 0 0 3em !important;
   text-align: left !important;
@@ -124,7 +124,7 @@
 }
 
 .approach-step-description {
-  color: #5c5c5c;
+  color: #808080;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;

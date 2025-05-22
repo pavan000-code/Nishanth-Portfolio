@@ -1,7 +1,7 @@
 .services-section {
   padding: 100px 0;
   background-color: #000;
-  color: #5c5c5c;
+  color: #808080;
   position: relative;
   overflow: hidden;
 }
@@ -82,7 +82,7 @@
 
 .section-description {
   font-size: 1.2rem;
-  color: #666666;
+  color: #808080;
   max-width: 600px;
   margin: 0;
   text-align: left;
@@ -178,11 +178,12 @@
 }
 
 .service-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #5c5c5c;
-  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #808080;
+  max-width: 600px;
+  margin: 0;
   text-align: left;
+  line-height: 1.6;
 }
 
 .service-features {
@@ -264,7 +265,7 @@
 .service-card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #5c5c5c;
+  color: #808080;
   margin-bottom: 20px;
 }
 

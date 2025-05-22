@@ -123,7 +123,7 @@
 }
 
 .project-card p {
-  color: #5c5c5c;
+  color: #808080;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -150,7 +150,7 @@
 
 .meta-value {
   font-size: 0.9rem;
-  color: #5c5c5c;
+  color: #808080;
 }
 
 .project-tags {
@@ -165,7 +165,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   font-size: 0.8rem;
-  color: #5c5c5c;
+  color: #808080;
 }
 
 .project-links {

@@ -1,7 +1,7 @@
 .strengths-section {
   padding: 100px 0;
   background-color: #000;
-  color: #5c5c5c;
+  color: #808080;
   position: relative;
   overflow: hidden;
 }
@@ -22,7 +22,7 @@
 
 .section-description {
   font-size: 1.2rem;
-  color: #666666;
+  color: #808080;
   max-width: 600px;
   margin: 20px 0 0 0;
   text-align: left;
@@ -140,6 +140,29 @@
   text-align: left;
   text-transform: none !important;
   font-weight: normal !important;
+}
+
+.strength-image-container {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.strength-image {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.strength-card:hover .strength-image {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
