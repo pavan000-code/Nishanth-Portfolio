@@ -46,9 +46,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 0;
+  gap: 60px; /* Added spacing between items */
   margin-top: 60px;
   position: relative;
+  flex-wrap: wrap; /* Optional for better wrapping on medium screens */
 }
 
 .approach-step {
@@ -58,6 +59,8 @@
   align-items: center;
   position: relative;
   min-width: 200px;
+  padding: 0 20px; /* Padding added to prevent text merging */
+  box-sizing: border-box;
 }
 
 .approach-step-img-wrapper {
@@ -101,12 +104,12 @@
 .approach-step-line {
   position: absolute;
   top: 50%;
-  left: 100%;
-  width: calc(100% + 30px);
+  left: 130%;
+  transform: translateX(-50%) translateY(-50%);
+  width: calc(90% + 10px); /* Original width + 30px on each side */
   height: 3px;
   background: #333;
   z-index: 1;
-  transform: translateY(-50%);
 }
 
 .approach-step-content {
@@ -127,10 +130,15 @@
   color: #808080;
   font-size: 1rem;
   line-height: 1.5;
-  margin: 0;
+  margin: 0 auto;
   max-width: 260px;
-  text-align: left;
+  text-align: justify;
   padding: 0;
+
+  /* FIXES */
+  word-spacing: 0.1em;
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 900px) {
