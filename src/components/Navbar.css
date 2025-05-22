@@ -9,13 +9,15 @@
   transform: none;
   will-change: auto;
   pointer-events: auto;
+  padding: 20px 0;
 }
 
 .container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 0 100px;
+  position: relative;
 }
 
 .logo {
@@ -26,11 +28,20 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  gap: 10px;
 }
 
 .logo-image {
   height: 40px;
-  margin-right: 10px;
+  width: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+.logo span {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  white-space: nowrap;
 }
 
 .nav ul {
@@ -57,21 +68,50 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 15px 0;
+  }
+
   .container {
     padding: 0 20px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .logo {
     margin-right: 0;
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+
+  .logo a {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: auto;
+  }
+
+  .logo-image {
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .logo span {
+    font-size: 0.7rem;
+    white-space: normal;
+    line-height: 1.2;
+    text-align: left;
+    word-wrap: break-word;
+    max-width: 100px;
   }
 
   .nav {
     display: none;
-  }
-
-  .nav.open {
-    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -79,20 +119,29 @@
     bottom: 0;
     background-color: #000000;
     padding: 80px 20px 20px;
+    z-index: 1000;
   }
 
-  .nav.open ul {
+  .nav.open {
+    display: block;
+  }
+
+  .nav ul {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+  }
+
+  .nav a {
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
   }
 
   .mobile-menu {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 20px;
-    z-index: 1000;
+    display: block;
+    position: relative;
+    z-index: 1001;
   }
 
   .menu-icon {
