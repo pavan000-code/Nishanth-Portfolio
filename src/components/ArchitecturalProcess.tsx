@@ -2,13 +2,7 @@ import React from "react";
 import "./ArchitecturalProcess.css";
 
 // Import images
-import icon1 from "/Design Process/tech-support-1.png";
-import icon2 from "/Design Process/razon-3.png";
-import icon3 from "/Design Process/Layer 3.png";
-import icon4 from "/Design Process/free-icon-measurement-3950210.png";
-import icon5 from "/Design Process/engineers.png";
-import icon6 from "/Design Process/Layer 8.png";
-import icon7 from "/Design Process/Challenge-1.png";
+
 
 interface Stage {
   number: string;
