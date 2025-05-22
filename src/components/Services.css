@@ -238,9 +238,9 @@
 }
 
 .service-image {
-  width: 100%;
-  height: 200px;
-  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -248,7 +248,7 @@
 .service-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
