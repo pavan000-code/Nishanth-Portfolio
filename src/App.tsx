@@ -1,6 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import ArchitecturalProcess from './components/ArchitecturalProcess'
 import Services from './components/Services'
 import Projects from './components/Projects'
 import Approach from './components/Approach'
@@ -16,6 +17,9 @@ function App() {
       <main className="app">
         <div>
           <Hero />
+        </div>
+        <div>
+          <ArchitecturalProcess />
         </div>
         <div>
           <Services />

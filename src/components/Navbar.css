@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #000000;
+  transform: none;
+  will-change: auto;
+  pointer-events: auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 100px;
+}
+
+.logo {
+  margin-right: 60px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #FFD700;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    padding: 80px 20px 20px;
+  }
+
+  .nav.open ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+    z-index: 1000;
+  }
+
+  .menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  .menu-icon span:first-child {
+    top: 0;
+  }
+
+  .menu-icon span:nth-child(2) {
+    top: 9px;
+  }
+
+  .menu-icon span:last-child {
+    top: 18px;
+  }
+
+  .menu-icon.open span:first-child {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .menu-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open span:last-child {
+    transform: rotate(-45deg);
+    top: 9px;
+  }
+} 

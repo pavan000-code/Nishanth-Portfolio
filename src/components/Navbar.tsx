@@ -40,19 +40,13 @@ const Navbar = () => {
         pointerEvents: 'auto'
       }}
     >
-      <div className="container">
-        <div 
-          className="mobile-menu" 
-          onClick={toggleMenu}
-        >
-          <div className={`menu-icon ${menuOpen ? 'open' : ''}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div className="logo">
+      <div className="container" style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'flex-start',
+        padding: '0 100px'
+      }}>
+        <div className="logo" style={{ marginRight: '60px' }}>
           <a href="#home">
             <img src="slablogo.png" alt="The Slab Design Studio Logo" className="logo-image" />
             <span style={{ color: '#FFFFFF' }}>The Slab Design Studio</span>
@@ -68,6 +62,17 @@ const Navbar = () => {
             <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
           </ul>
         </nav>
+
+        <div 
+          className="mobile-menu" 
+          onClick={toggleMenu}
+        >
+          <div className={`menu-icon ${menuOpen ? 'open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
     </header>
   );

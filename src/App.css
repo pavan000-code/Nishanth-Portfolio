@@ -159,7 +159,7 @@ a:hover {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0px;
 }
 
 .logo a span {
@@ -401,27 +401,33 @@ a:hover {
   .header .container {
     padding: 0 20px;
     justify-content: flex-start;
+    display: flex;
+    align-items: center;
   }
 
   .mobile-menu {
     display: block;
     order: -1;
+    margin-right: 20px;
   }
 
   .logo {
     margin-left: 0;
+    flex: 0 0 auto;
   }
 
   .nav {
     display: none;
     position: fixed;
-    top: 100px;
-    left: 0;
-    right: 0;
-    background-color: var(--dark-color);
-    padding: 20px;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 15px;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: auto;
+    min-width: 200px;
   }
 
   .nav.open {
@@ -430,17 +436,17 @@ a:hover {
 
   .nav ul {
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 0;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 0;
   }
 
   .nav a {
-    font-size: 1.1rem;
-    padding: 10px 0;
+    font-size: 1rem;
+    padding: 8px 0;
     display: block;
     width: 100%;
-    text-align: center;
+    text-align: left;
     color: var(--light-color);
   }
 
@@ -483,7 +489,7 @@ a:hover {
 
   .section-description {
     font-size: 0.95rem;
-    padding: 0;
+    padding-left: 1.5em;
     margin: 0;
     text-align: left;
   }
@@ -668,7 +674,7 @@ a:hover {
 
   .about-section .section-description {
     font-size: 0.95rem !important;
-    padding-left: 25px !important;
+    padding-left: 1.5em !important;
     margin-left: 0 !important;
     text-align: left;
   }
@@ -837,6 +843,13 @@ a:hover {
 
   .service-features {
     grid-template-columns: 1fr;
+  }
+
+  .services-section .section-description {
+    font-size: 0.95rem !important;
+    padding-left: 2em !important;
+    margin-left: 0 !important;
+    text-align: left;
   }
 }
 
@@ -1472,7 +1485,7 @@ a:hover {
 
   .approach-section .section-description {
     font-size: 0.95rem !important;
-    padding-left: 25px !important;
+    padding-left: 1.2em !important;
     margin-left: 0 !important;
     text-align: left;
   }
@@ -1601,7 +1614,7 @@ section {
 
   .section-description {
     font-size: 0.95rem;
-    padding: 0 0 0 1.2em;
+    padding-left: 1.2em;
     margin: 0;
     text-align: left;
   }
@@ -1620,27 +1633,53 @@ section {
   }
 
   .contact-section .container {
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
   }
 
-  .contact-section .section-title {
-    font-size: 2.5rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-    color: #ffffff;
-    text-align: left;
-    margin: 0;
-    padding: 0;
+  .contact-form {
     width: 100%;
-    position: relative;
-    left: 0;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  .contact-section .section-description {
-    font-size: 0.95rem;
-    padding: 0;
-    margin: 0;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .form-group label {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    text-align: center;
+  }
+
+  .submit-button {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-section .section-description,
+  .services-section .section-description,
+  .projects-section .section-description,
+  .approach-section .section-description,
+  .contact-section .section-description,
+  .strengths-section .section-description {
+    font-size: 0.95rem !important;
+    padding-left: 1.2em !important;
+    margin-left: 0 !important;
     text-align: left;
   }
 }

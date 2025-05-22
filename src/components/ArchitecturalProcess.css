@@ -1,0 +1,117 @@
+.process-section {
+  padding: 100px 0;
+  background-color: #000;
+  color: #5c5c5c;
+  position: relative;
+  overflow: hidden;
+}
+
+.process-section .container {
+  padding: 0 100px;
+  margin: 0;
+}
+
+.section-header {
+  text-align: left;
+  margin: 0 0 60px 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #ffffff;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.section-description-wrapper {
+  padding-left: 0.6em;
+  margin-top: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #666666;
+  max-width: 600px;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.stages-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.stage-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.stage-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stage-title {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .process-section {
+    padding: 60px 0;
+  }
+
+  .process-section .container {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+  }
+
+  .stage {
+    padding: 15px;
+  }
+
+  .stage-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stage-number {
+    font-size: 1.2rem;
+  }
+
+  .stage-title {
+    font-size: 1rem;
+  }
+}
+  

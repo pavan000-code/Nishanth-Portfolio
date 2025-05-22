@@ -202,6 +202,7 @@
     padding-left: 25px !important;
     margin-left: 0 !important;
     text-align: left;
+    
   }
   
   .section-title {
@@ -213,9 +214,10 @@
   
   .section-subtitle {
     font-size: 0.95rem !important;
-    padding-left: 25px !important;
+    padding-left: 0 !important;
     margin-left: 0 !important;
     text-align: left;
+    left: 1.1em !important;
   }
   
   .project-filters {

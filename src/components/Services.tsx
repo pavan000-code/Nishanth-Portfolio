@@ -26,8 +26,29 @@ const Services = () => {
       title: "Landscape Architecture",
       description: "Creating outdoor spaces that connect people with nature. Our landscape designs enhance the environment while providing functional and beautiful outdoor living areas.",
       features: ["Garden Design", "Urban Planning", "Sustainable Landscaping", "Outdoor Living Spaces"]
+    },
+    {
+      title: "Exterior Design",
+      description: "Crafting visually striking exteriors with modern elevations and unique architectural elements. We ensure each structure has a strong identity and lasting impression.",
+      features: ["Modern Elevations", "Facade Design", "Aesthetic Enhancements", "Custom Exterior Themes"]
+    },
+    {
+      title: "Construction",
+      description: "Expertise in modern construction techniques with a focus on quality, efficiency, and sustainability. We ensure robust and precise execution through skilled labor and top-grade materials.",
+      features: ["Modern Techniques", "Quality Materials", "Sustainable Construction", "Skilled Labor"]
+    },
+    {
+      title: "Decoration",
+      description: "Enhancing spaces through the precise selection of decor elements. Our decoration services create memorable interiors using color, texture, and handpicked artifacts.",
+      features: ["Color and Texture Selection", "Decor Curation", "Artwork & Accessories", "Memorable Interiors"]
+    },
+    {
+      title: "Theme Selection",
+      description: "Bringing your design vision to life through a fusion of styles. We specialize in curating themes that suit contemporary, traditional, or personalized preferences.",
+      features: ["Contemporary Themes", "Traditional Styles", "Style Fusion", "Custom Design Concepts"]
     }
-  ];
+  ]
+  ;
 
   const containerVariants = {
     hidden: { opacity: 0 },
