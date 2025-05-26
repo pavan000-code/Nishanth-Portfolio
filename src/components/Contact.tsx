@@ -1,6 +1,8 @@
 import { useState, FormEvent } from 'react';
 import AnimatedHeading from './AnimatedHeading';
 import './Contact.css';
+import { motion } from 'framer-motion';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +10,8 @@ const Contact = () => {
     email: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
+    subject: ''
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,7 +53,8 @@ const Contact = () => {
         email: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
+        subject: ''
       });
     } catch (error) {
       setSubmitMessage('An error occurred. Please try again later.');
@@ -64,14 +68,58 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">CONTACT US</h2>
+          <h2 className="section-title">CONTACT</h2>
           <p className="section-description">
-            Have a project in mind? Get in touch with our design team to discuss your ideas.
+            Let's discuss how we can work together
           </p>
         </div>
-        
+
         <div className="contact-content">
-          <div>
+          <motion.div 
+            className="contact-info"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="contact-methods">
+              <div className="contact-method">
+                <div className="method-icon">
+                  <FaEnvelope />
+                </div>
+                <div className="method-details">
+                  <h3>Email</h3>
+                  <a href="mailto:info@theslabdesignstudio.com">info@theslabdesignstudio.com</a>
+                </div>
+              </div>
+              <div className="contact-method">
+                <div className="method-icon">
+                  <FaPhone />
+                </div>
+                <div className="method-details">
+                  <h3>Phone</h3>
+                  <a href="tel:+12125551234">+1 (212) 555-1234</a>
+                </div>
+              </div>
+              <div className="contact-method">
+                <div className="method-icon">
+                  <FaMapMarkerAlt />
+                </div>
+                <div className="method-details">
+                  <h3>Location</h3>
+                  <p>New York, NY</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="contact-form-container"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             {submitMessage && (
               <div className={`message ${messageType}`}>
                 {submitMessage}
@@ -80,127 +128,54 @@ const Contact = () => {
             
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Name *</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your Name" 
-                  required 
+                  required
+                  placeholder="Your Name"
                 />
               </div>
-              
               <div className="form-group">
-                <label htmlFor="email">Email *</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Your Email" 
-                  required 
+                  required
+                  placeholder="Your Email"
                 />
               </div>
-              
               <div className="form-group">
-                <label htmlFor="phone">Phone Number</label>
-                <input 
-                  type="tel" 
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Your Phone Number" 
+                  required
+                  placeholder="Subject"
                 />
               </div>
-
               <div className="form-group">
-                <label htmlFor="service">Service Interested In</label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                >
-                  <option value="">Select a Service</option>
-                  <option value="Architectural Design">Architectural Design</option>
-                  <option value="Interior Design">Interior Design</option>
-                  <option value="3D Visualization">3D Visualization</option>
-                  <option value="Space Planning">Space Planning</option>
-                  <option value="Landscape Design">Landscape Design</option>
-                  <option value="Sustainable Design">Sustainable Design</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="message">Message *</label>
-                <textarea 
+                <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell us about your project" 
-                  rows={5} 
                   required
+                  placeholder="Your Message"
+                  rows={5}
                 ></textarea>
               </div>
-              
-              <button 
-                type="submit" 
-                className="submit-button"
-                disabled={isSubmitting}
-              >
+              <button type="submit" className="submit-button" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
-          </div>
-          
-          <div className="contact-info">
-            <div className="info-item">
-              <AnimatedHeading 
-                text="Our Office" 
-                className="info-title"
-                tag="h3"
-              />
-              <p>123 Design Street, Suite 101<br />New York, NY 10001</p>
-            </div>
-            
-            <div className="info-item">
-              <AnimatedHeading 
-                text="Contact Information" 
-                className="info-title"
-                tag="h3"
-              />
-              <p><a href="mailto:info@theslabdesignstudio.com">info@theslabdesignstudio.com</a></p>
-              <p><a href="tel:+12125551234">+1 (212) 555-1234</a></p>
-            </div>
-            
-            <div className="info-item">
-              <AnimatedHeading 
-                text="Working Hours" 
-                className="info-title"
-                tag="h3"
-              />
-              <p>Monday - Friday: 9am - 6pm<br />Saturday: By appointment<br />Sunday: Closed</p>
-            </div>
-            
-            <div className="info-item">
-              <AnimatedHeading 
-                text="Connect With Us" 
-                className="info-title"
-                tag="h3"
-              />
-              <div className="social-links-contact">
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

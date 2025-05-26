@@ -28,7 +28,6 @@
   width: 100%;
   position: relative;
   z-index: 2;
-  padding: 0 20px;
 }
 
 .hero-content h1 {
@@ -60,14 +59,13 @@
 /* Mobile devices */
 @media (max-width: 768px) {
   .hero {
-    min-height: 80vh;
-    padding: 0 15px;
-    background-position: center center;
+    min-height: 100vh;
+    padding-top: 80px;
   }
   
   .hero-content {
-    padding: 0 15px;
-    text-align: center;
+    text-align: left;
+    padding: 0 20px;
   }
   
   .hero-content h1 {
@@ -77,26 +75,16 @@
   
   .hero-content p {
     font-size: 1.2rem;
-    margin: 0 auto;
   }
 }
 
 /* Small mobile devices */
 @media (max-width: 480px) {
-  .hero {
-    min-height: 70vh;
-    padding: 0 10px;
-  }
-  
-  .hero-content {
-    padding: 0 10px;
-  }
-  
   .hero-content h1 {
     font-size: 2rem;
   }
   
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 } 

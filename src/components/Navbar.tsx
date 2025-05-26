@@ -20,7 +20,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
@@ -49,10 +49,10 @@ const Navbar = () => {
         <div className="navbar-logo">
           <a href="#home" onClick={closeMenu}>
             <img src={logoImage} alt="The Slab Design Studio Logo" />
-            <span>The Slab Design Studio</span>
+                <span>The Slab Design Studio</span>
           </a>
         </div>
-
+        
         <button 
           className={`hamburger ${isMenuOpen ? 'active' : ''}`} 
           onClick={toggleMenu}

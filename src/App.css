@@ -44,25 +44,6 @@ section {
   overflow: hidden;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--secondary-color);
-  margin-bottom: 20px;
-}
-
-.section-description {
-  font-size: 1.1rem;
-  color: var(--text-color);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 /* Button Styles */
 .btn {
   display: inline-block;
@@ -96,25 +77,7 @@ section {
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-description {
-    font-size: 1rem;
-  }
-}
-
 /* Reset and global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: left;
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -756,20 +719,25 @@ a:hover {
   padding: 100px 0;
   background-color: var(--background-color);
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .services-section .container {
   padding: 0 100px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .services-section .section-header {
-  text-align: left;
+  text-align: center !important;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
   width: 100%;
   padding: 0;
+  display: block;
 }
 
 .services-section .section-title {
@@ -777,30 +745,30 @@ a:hover {
   font-weight: 900;
   letter-spacing: -1px;
   color: #ffffff;
-  text-align: left;
+  text-align: center !important;
   margin: 0;
   padding: 0;
   width: 100%;
+  display: block;
 }
 
 .services-section .section-description {
   font-size: 1.2rem;
   color: #5c5c5c;
   max-width: 600px;
-  margin: 20px 0 0 0;
-  text-align: left;
-  padding: 0 0 0 1.2em;
+  margin: 20px auto 0;
+  text-align: center !important;
+  padding: 0;
   position: relative;
   left: 0;
+  display: block;
 }
 
-.section-tagline {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--text-color);
-  margin-bottom: 15px;
+.services-content {
+  margin-top: 40px;
+  width: 100%;
   display: block;
+  position: relative;
 }
 
 .services-list {
@@ -809,6 +777,7 @@ a:hover {
   gap: 30px;
   max-width: 900px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .service-item {
@@ -817,6 +786,7 @@ a:hover {
   background-color: var(--darker-color);
   border-radius: 0;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .service-item::after {
@@ -900,6 +870,14 @@ a:hover {
     padding: 80px 0;
   }
 
+  .services-section .container {
+    padding: 0 20px;
+  }
+
+  .services-section .section-header {
+    margin-bottom: 40px;
+  }
+
   .section-title {
     font-size: 2.5rem;
   }
@@ -918,7 +896,7 @@ a:hover {
 
   .services-section .section-description {
     font-size: 0.95rem !important;
-    padding-left: 2em !important;
+    padding-left: 1.2em !important;
     margin-left: 0 !important;
     text-align: left;
   }
@@ -929,20 +907,25 @@ a:hover {
   padding: 100px 0;
   background-color: var(--darker-color);
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-section .container {
   padding: 0 100px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-section .section-header {
-  text-align: left;
+  text-align: center !important;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
   width: 100%;
   padding: 0;
+  display: block;
 }
 
 .projects-section .section-title {
@@ -950,27 +933,39 @@ a:hover {
   font-weight: 900;
   letter-spacing: -1px;
   color: #ffffff;
-  text-align: left;
+  text-align: center !important;
   margin: 0;
   padding: 0;
   width: 100%;
+  display: block;
 }
 
 .projects-section .section-description {
   font-size: 1.2rem;
   color: #5c5c5c;
   max-width: 600px;
-  margin: 20px 0 0 0;
-  text-align: left;
-  padding: 0 0 0 100px;
+  margin: 20px auto 0;
+  text-align: center !important;
+  padding: 0;
+  position: relative;
+  left: 0;
+  display: block;
+}
+
+.projects-content {
+  margin-top: 40px;
+  width: 100%;
+  display: block;
+  position: relative;
 }
 
 .project-filters {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 40px;
   flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
 }
 
 .project-filters button {
@@ -993,6 +988,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+  width: 100%;
 }
 
 .project-card {
@@ -1002,6 +998,7 @@ a:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
 .project-card:hover {
@@ -1013,6 +1010,7 @@ a:hover {
 .project-image {
   height: 200px;
   overflow: hidden;
+  width: 100%;
 }
 
 .project-image img {
@@ -1028,6 +1026,7 @@ a:hover {
 
 .project-content {
   padding: 20px;
+  width: 100%;
 }
 
 .project-card h3 {
@@ -1046,6 +1045,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .tag {
@@ -1063,6 +1063,7 @@ a:hover {
   display: flex;
   justify-content: flex-start;
   gap: 15px;
+  width: 100%;
 }
 
 .project-links a {
@@ -1075,6 +1076,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .meta-item {
@@ -1091,6 +1093,39 @@ a:hover {
 
 .meta-value {
   color: var(--light-color);
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 80px 0;
+  }
+
+  .projects-section .container {
+    padding: 0 20px;
+  }
+
+  .projects-section .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .project-filters {
+    justify-content: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-section .section-description {
+    font-size: 0.95rem !important;
+    padding-left: 1.2em !important;
+    margin-left: 0 !important;
+    text-align: left;
+  }
 }
 
 /* Skills section */
@@ -1633,6 +1668,8 @@ section {
 .strengths-section {
   padding: 100px 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .services-section .container,
@@ -1643,51 +1680,83 @@ section {
 .strengths-section .container {
   padding: 0 100px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.section-title {
+/* Remove these global section header styles */
+/* .services-section .section-header,
+.projects-section .section-header,
+.about-section .section-header,
+.contact-section .section-header,
+.approach-section .section-header,
+.strengths-section .section-header {
+  text-align: center !important;
+  margin: 0 0 60px 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+  display: block;
+} */
+
+/* Remove these global section title styles */
+/* .services-section .section-title,
+.projects-section .section-title,
+.about-section .section-title,
+.contact-section .section-title,
+.approach-section .section-title,
+.strengths-section .section-title {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
   color: #ffffff;
-  text-align: left;
+  text-align: center !important;
   margin: 0;
   padding: 0;
   width: 100%;
-  position: relative;
-  left: 0;
-}
+  display: block;
+} */
 
-.section-description {
+/* Remove these global section description styles */
+/* .services-section .section-description,
+.projects-section .section-description,
+.about-section .section-description,
+.contact-section .section-description,
+.approach-section .section-description,
+.strengths-section .section-description {
   font-size: 1.2rem;
   color: #5c5c5c;
   max-width: 600px;
-  margin: 20px 0 0 0;
-  text-align: left;
-  padding: 0 0 0 1.2em;
+  margin: 20px auto 0;
+  text-align: center !important;
+  padding: 0;
   position: relative;
   left: 0;
+  display: block;
+} */
+
+.services-content,
+.projects-content,
+.about-content,
+.contact-content,
+.approach-content,
+.strengths-content {
+  margin-top: 40px;
+  width: 100%;
+  display: block;
+  position: relative;
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-    color: #ffffff;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    position: relative;
-    left: 0;
-  }
-
-  .section-description {
-    font-size: 0.95rem;
-    padding-left: 1.2em;
-    margin: 0;
-    text-align: left;
+  .services-section,
+  .projects-section,
+  .about-section,
+  .contact-section,
+  .approach-section,
+  .strengths-section {
+    padding: 80px 0;
   }
 
   .services-section .container,
@@ -1699,59 +1768,31 @@ section {
     padding: 0 20px;
   }
 
-  .contact-section {
-    padding: 60px 0;
+  .services-section .section-header,
+  .projects-section .section-header,
+  .about-section .section-header,
+  .contact-section .section-header,
+  .approach-section .section-header,
+  .strengths-section .section-header {
+    margin-bottom: 40px;
+    text-align: center !important;
   }
 
-  .contact-section .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center !important;
   }
 
-  .contact-form {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 8px;
-  }
-
-  .form-group label {
-    width: 100%;
-    text-align: center;
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    text-align: center;
-  }
-
-  .submit-button {
-    margin: 0 auto;
-    display: block;
-  }
-
-  .about-section .section-description,
   .services-section .section-description,
   .projects-section .section-description,
-  .approach-section .section-description,
+  .about-section .section-description,
   .contact-section .section-description,
+  .approach-section .section-description,
   .strengths-section .section-description {
     font-size: 0.95rem !important;
-    padding-left: 1.2em !important;
-    margin-left: 0 !important;
-    text-align: left;
+    text-align: center !important;
+    margin: 20px auto 0;
+    padding: 0;
   }
 }
 
@@ -1792,7 +1833,7 @@ section {
   z-index: 1;
   width: 100%;
   overflow-x: hidden;
-  padding-top: 60px;
+  padding-top: 120px;
   transform: none !important;
   min-height: 100vh;
   isolation: isolate;

@@ -4,10 +4,21 @@
   color: #fff;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section .container {
+  padding: 0 100px;
+  margin: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-header {
-  text-align: left;
+  text-align: left !important;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
@@ -15,13 +26,27 @@
   padding: 0;
 }
 
+.section-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #fff;
+  text-align: left !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 .section-description {
   font-size: 1.2rem;
   color: #808080;
   max-width: 600px;
   margin: 20px 0 0 0;
-  text-align: left;
-  padding-left: 1.2em;
+  text-align: left !important;
+  padding: 0;
+  position: relative;
+  left: 0;
+  text-transform: none !important;
 }
 
 .about-content {
@@ -190,6 +215,10 @@
     padding: 60px 20px;
   }
   
+  .about-section .container {
+    padding: 0 20px;
+  }
+  
   .about-details {
     grid-template-columns: 1fr;
   }
@@ -198,10 +227,23 @@
     max-width: 300px;
   }
 
-  .about-section .section-description {
-    padding-left: 1.2em;
-    margin-left: 0;
-    text-align: left;
+  .section-header {
+    text-align: left !important;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+
+  .section-title {
+    font-size: 2.5rem !important;
+    text-align: left !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .section-description {
+    text-align: left !important;
+    padding: 0;
+    margin: 20px 0 0 0;
   }
 
   .about-buttons {

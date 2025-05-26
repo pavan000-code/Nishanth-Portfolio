@@ -47,8 +47,7 @@ const Services = () => {
       description: "Bringing your design vision to life through a fusion of styles. We specialize in curating themes that suit contemporary, traditional, or personalized preferences.",
       features: ["Contemporary Themes", "Traditional Styles", "Style Fusion", "Custom Design Concepts"]
     }
-  ]
-  ;
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -99,82 +98,69 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="services-section">
+    <section className="about-section">
       <div className="container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="section-title">Services</h2>
+        <div className="section-header">
+          <h2 className="section-title">SERVICES</h2>
           <div className="section-description-wrapper">
-            <p className="section-description" style={{ color: '#666666' }}>
+            <p className="section-description">
               Comprehensive solutions tailored to your needs
             </p>
           </div>
-        </motion.div>
+        </div>
         
-        <motion.div 
-          className="services-list"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="service-item"
-              variants={itemVariants}
-            >
-              <div 
-                className={`service-header ${activeService === index ? 'active' : ''}`}
-                onClick={() => setActiveService(activeService === index ? null : index)}
+        <div className="services-content">
+          <motion.div 
+            className="services-list"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="service-item"
+                variants={itemVariants}
               >
-                <h3 className="service-title">{service.title}</h3>
-                <motion.div 
-                  className="service-icon"
-                  animate={{ rotate: activeService === index ? 45 : 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  +
-                </motion.div>
-              </div>
-              
-              <AnimatePresence>
-                {activeService === index && (
-                  <motion.div
-                    className="service-content"
-                    variants={descriptionVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                  >
-                    <div className="service-description-wrapper">
-                      <div className="service-description" style={{ color: '#5c5c5c' }}>{service.description}</div>
-                      <ul className="service-features">
-                        {service.features.map((feature, idx) => (
-                          <motion.li 
-                            key={idx}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: idx * 0.1 }}
-                            style={{ color: '#5c5c5c' }}
-                          >
-                            <span className="feature-icon">•</span>
-                            {feature}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
-        </motion.div>
+                <div className="service-header" onClick={() => setActiveService(activeService === index ? null : index)}>
+                  <h3 className="service-title">{service.title}</h3>
+                  <span className="service-icon">
+                    {activeService === index ? '−' : '+'}
+                  </span>
+                </div>
+                <AnimatePresence>
+                  {activeService === index && (
+                    <motion.div
+                      className="service-content"
+                      variants={descriptionVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                    >
+                      <div className="service-description-wrapper">
+                        <div className="service-description">{service.description}</div>
+                        <ul className="service-features">
+                          {service.features.map((feature, idx) => (
+                            <motion.li 
+                              key={idx}
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: idx * 0.1 }}
+                            >
+                              <span className="feature-icon">•</span>
+                              {feature}
+                            </motion.li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

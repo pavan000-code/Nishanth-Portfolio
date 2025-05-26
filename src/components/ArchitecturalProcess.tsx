@@ -24,12 +24,12 @@ const stages: Stage[] = [
 
 const ArchitecturalProcess: React.FC = () => {
   return (
-    <section className="process-section">
+    <section className="about-section">
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">DESIGN PROCESS</h2>
           <div className="section-description-wrapper">
-            <p className="section-description" style={{ color: '#666666' }}>
+            <p className="section-description">
               Our step-by-step approach to creating your perfect space
             </p>
           </div>

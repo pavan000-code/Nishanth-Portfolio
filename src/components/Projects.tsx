@@ -94,96 +94,94 @@ const Projects = () => {
       );
 
   return (
-    <section id="projects" className="projects-section">
+    <section className="process-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">PROJECTS</h2>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <p className="section-subtitle">
+          <h2 className="section-title" style={{ textAlign: 'left' }}>PROJECTS</h2>
+          <div className="section-description-wrapper">
+            <p className="section-description">
               Explore our portfolio of award-winning designs across various categories.
             </p>
-          </motion.div>
+          </div>
         </div>
         
-        <div className="project-filters">
-          <button 
-            className={activeFilter === "all" ? "active" : ""} 
-            onClick={() => setActiveFilter("all")}
-          >
-            All
-          </button>
-          <button 
-            className={activeFilter === "residential" ? "active" : ""} 
-            onClick={() => setActiveFilter("residential")}
-          >
-            Residential
-          </button>
-          <button 
-            className={activeFilter === "commercial" ? "active" : ""} 
-            onClick={() => setActiveFilter("commercial")}
-          >
-            Commercial
-          </button>
-          <button 
-            className={activeFilter === "interior" ? "active" : ""} 
-            onClick={() => setActiveFilter("interior")}
-          >
-            Interior Design
-          </button>
-          <button 
-            className={activeFilter === "sustainable" ? "active" : ""} 
-            onClick={() => setActiveFilter("sustainable")}
-          >
-            Sustainable
-          </button>
-        </div>
-        
-        <div className="projects-grid">
-          {filteredProjects.map((project) => (
-            <div className="project-card" key={project.id}>
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
+        <div className="projects-content">
+          <div className="project-filters">
+            <button 
+              className={activeFilter === "all" ? "active" : ""} 
+              onClick={() => setActiveFilter("all")}
+            >
+              All
+            </button>
+            <button 
+              className={activeFilter === "residential" ? "active" : ""} 
+              onClick={() => setActiveFilter("residential")}
+            >
+              Residential
+            </button>
+            <button 
+              className={activeFilter === "commercial" ? "active" : ""} 
+              onClick={() => setActiveFilter("commercial")}
+            >
+              Commercial
+            </button>
+            <button 
+              className={activeFilter === "interior" ? "active" : ""} 
+              onClick={() => setActiveFilter("interior")}
+            >
+              Interior Design
+            </button>
+            <button 
+              className={activeFilter === "sustainable" ? "active" : ""} 
+              onClick={() => setActiveFilter("sustainable")}
+            >
+              Sustainable
+            </button>
+          </div>
+          
+          <div className="projects-grid">
+            {filteredProjects.map((project) => (
+              <div className="project-card" key={project.id}>
+                <div className="project-image">
+                  <img src={project.image} alt={project.title} />
+                </div>
+                <div className="project-content">
+                  <AnimatedHeading 
+                    text={project.title} 
+                    className="project-title"
+                    tag="h3"
+                  />
+                  <p>{project.description}</p>
+                  <div className="project-meta">
+                    {project.location && (
+                      <div className="meta-item">
+                        <span className="meta-label">Location:</span>
+                        <span className="meta-value">{project.location}</span>
+                      </div>
+                    )}
+                    {project.year && (
+                      <div className="meta-item">
+                        <span className="meta-label">Year:</span>
+                        <span className="meta-value">{project.year}</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="project-tags">
+                    {project.tags.map((tag, index) => (
+                      <span key={index} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                  <div className="project-links">
+                    {project.detailUrl && (
+                      <a href={project.detailUrl} className="button">
+                        View Details
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div className="project-content">
-                <AnimatedHeading 
-                  text={project.title} 
-                  className="project-title"
-                  tag="h3"
-                />
-                <p>{project.description}</p>
-                <div className="project-meta">
-                  {project.location && (
-                    <div className="meta-item">
-                      <span className="meta-label">Location:</span>
-                      <span className="meta-value">{project.location}</span>
-                    </div>
-                  )}
-                  {project.year && (
-                    <div className="meta-item">
-                      <span className="meta-label">Year:</span>
-                      <span className="meta-value">{project.year}</span>
-                    </div>
-                  )}
-                </div>
-                <div className="project-tags">
-                  {project.tags.map((tag, index) => (
-                    <span key={index} className="tag">{tag}</span>
-                  ))}
-                </div>
-                <div className="project-links">
-                  {project.detailUrl && (
-                    <a href={project.detailUrl} className="button">
-                      View Details
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

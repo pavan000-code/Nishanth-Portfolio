@@ -25,11 +25,15 @@ const approaches = [
 
 const Approach = () => {
   return (
-    <section id="approach" className="approach-section">
+    <section className="process-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">APPROACH</h2>
-          <p className="section-description">How we work to deliver exceptional results</p>
+          <h2 className="section-title" style={{ textAlign: 'left' }}>APPROACH</h2>
+          <div className="section-description-wrapper">
+            <p className="section-description">
+              How we work to deliver exceptional results
+            </p>
+          </div>
         </div>
         <div className="approach-steps">
           {approaches.map((approach, idx) => (

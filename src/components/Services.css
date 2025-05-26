@@ -1,14 +1,60 @@
-.services-section {
+.process-section {
   padding: 100px 0;
   background-color: #000;
   color: #808080;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.services-section .container {
+.process-section .container {
   padding: 0 100px;
   margin: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.process-section .section-header {
+  text-align: left !important;
+  margin: 0 0 60px 0;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+}
+
+.process-section .section-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #ffffff;
+  text-align: left !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.process-section .section-description-wrapper {
+  margin-top: 20px;
+  width: 100%;
+  text-align: left !important;
+  padding: 0 !important;
+}
+
+.process-section .section-description {
+  font-size: 1rem !important;
+  color: #a0a0a0 !important;
+  margin: 0 !important;
+  max-width: 600px;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  text-indent: 0 !important;
+  padding-left: 2.9em !important;
+  margin-left: 0 !important;
+  text-align: left !important;
 }
 
 .parallax-background {
@@ -58,35 +104,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.section-header {
-  text-align: left;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.section-title {
-  font-size: 80px;
-  font-weight: 900;
-  margin-bottom: 20px;
-  text-align: left;
-  position: relative;
-  text-transform: uppercase;
-}
-
-.section-description-wrapper {
-  padding-left: 0.6em;
-  margin-top: 20px;
-}
-
-.section-description {
-  font-size: 1.2rem;
-  color: #808080;
-  max-width: 600px;
-  margin: 0;
-  text-align: left;
-  line-height: 1.6;
 }
 
 .section-tagline {
@@ -181,9 +198,12 @@
   font-size: 1.2rem;
   color: #808080;
   max-width: 600px;
-  margin: 0;
-  text-align: left;
-  line-height: 1.6;
+  margin: 20px 0 0 0;
+  text-align: left !important;
+  padding: 0 0 0 4.5em !important;
+  position: relative;
+  left: 0;
+  text-transform: none !important;
 }
 
 .service-features {
@@ -299,42 +319,39 @@
 }
 
 @media (max-width: 768px) {
-  .services-section {
-    padding: 60px 20px;
+  .process-section {
+    padding: 60px 0;
   }
 
-  .services-section .container {
+  .process-section .container {
+    padding: 0 20px;
+  }
+
+  .process-section .section-header {
+    padding: 0 20px;
+  }
+
+  .process-section .section-title {
+    font-size: 2.5rem;
+    text-align: left !important;
+    margin: 0;
     padding: 0;
+    width: 100%;
   }
 
-  .section-header {
-    text-align: left;
-    padding-left: 0 !important;
+  .process-section .section-description-wrapper {
+    padding: 0 !important;
+  }
+
+  .process-section .section-description {
+    font-size: 0.95rem !important;
+    padding-left: 3.9em !important;
     margin-left: 0 !important;
+    text-indent: 0 !important;
+    text-align: left !important;
   }
 
-  .section-title {
-    font-size: 1.8rem !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    text-align: left;
-    color: #fff !important;
-  }
-
-  .section-description-wrapper {
-    transform: translateX(-0.1em) !important;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-  }
-
-  .section-description {
-    padding-left: 0 !important;
-    margin-left: 0;
-    text-align: left;
-    text-transform: none !important;
-    color: #666666;
-    left: 0.1em !important;
-  }
+  
 
   .service-item {
     padding: 15px 0 0 0;
@@ -346,12 +363,25 @@
   }
 
   .service-description-wrapper {
-    padding-left: 0.6em;
+    padding-left: 0;
     margin-left: 0;
     text-align: left;
   }
   
   .service-features li {
-    padding-left: 1.2em;
+    padding-left: 0;
   }
+}
+
+.about-section .section-description {
+  font-size: 1rem !important;
+  color: #a0a0a0 !important;
+  margin: 0 !important;
+  max-width: 600px;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  text-indent: 0 !important;
+  padding-left: 1.7em !important;
+  margin-left: 0 !important;
+  text-align: left !important;
 }

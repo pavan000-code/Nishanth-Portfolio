@@ -1,18 +1,24 @@
-.process-section {
+.about-section {
   padding: 100px 0;
   background-color: #000;
-  color: #5c5c5c;
+  color: #808080;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.process-section .container {
+.about-section .container {
   padding: 0 100px;
   margin: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.section-header {
-  text-align: left;
+.about-section .section-header {
+  text-align: left !important;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
@@ -20,85 +26,125 @@
   padding: 0;
 }
 
-.section-title {
+.about-section .section-title {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
   color: #ffffff;
-  text-align: left;
+  text-align: left !important;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-.section-description-wrapper {
-  padding-left: 0.6em;
+.about-section .section-description-wrapper {
   margin-top: 20px;
+  width: 100%;
+  text-align: left !important;
+  padding: 0 0 0 2.5em !important;
 }
 
-.section-description {
-  font-size: 1.2rem;
-  color: #666666;
+.about-section .section-description {
+  font-size: 1rem !important;
+  color: #a0a0a0 !important;
+  margin: 0 !important;
   max-width: 600px;
-  margin: 0;
-  text-align: left;
-  line-height: 1.6;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  text-indent: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  text-align: left !important;
 }
 
 .stages-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  align-items: flex-start;
 }
 
 .stage {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 10px 0;
   background-color: #000;
   border-radius: 0;
   transition: all 0.3s ease;
+  width: 100%;
+  border-bottom: 1px solid #333;
+  justify-content: flex-start;
+}
+
+.stage:last-child {
+  border-bottom: none;
 }
 
 .stage-icon {
   width: 60px;
   height: 60px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .stage-number {
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
+  flex-shrink: 0;
+  min-width: 40px;
+  text-align: left;
 }
 
 .stage-title {
   font-size: 1.2rem;
   color: #fff;
+  flex-grow: 1;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
-  .process-section {
+  .about-section {
     padding: 60px 0;
   }
 
-  .process-section .container {
+  .about-section .container {
     padding: 0 20px;
   }
 
-  .section-title {
+  .about-section .section-header {
+    padding: 0 20px;
+  }
+
+  .stages-wrapper {
+    padding: 0 20px;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .about-section .section-title {
     font-size: 2.5rem;
   }
 
-  .section-description {
-    font-size: 0.95rem;
+  .about-section .section-description-wrapper {
+    padding: 0 !important;
+  }
+
+  .about-section .section-description {
+    font-size: 0.95rem !important;
+    padding-left: 1em !important;
+    margin-left: 0 !important;
+    text-indent: 0 !important;
+    text-align: left !important;
   }
 
   .stage {
-    padding: 15px;
+    padding: 10px 0;
   }
 
   .stage-icon {
@@ -114,4 +160,3 @@
     font-size: 1rem;
   }
 }
-  

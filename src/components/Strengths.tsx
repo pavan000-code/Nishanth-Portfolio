@@ -1,90 +1,94 @@
+import React from 'react';
 import { motion } from 'framer-motion';
+import { FaLightbulb, FaRocket, FaUsers, FaChartLine } from 'react-icons/fa';
 import './Strengths.css';
 import { baseUrl } from '../utils/constants';
 
-const strengths = [
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6
+    }
+  }
+};
+
+interface Strength {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+const strengths: Strength[] = [
   {
-    title: 'Construction Document Production',
-    description: 'Construction documents are critical for a variety of reasons in the construction process to assure the design intent is clearly and concisely communicated and eventually for maintenance and repairs throughout the life of the structure. To achieve this level of clarity we prepare our documents with close coordination with various consultants, regular meetings and joint reviews and periodic quality control checks from start to completion.',
-    image: `${baseUrl}Our Strength/Layer 1.png`
+    title: "Innovative Thinking",
+    description: "Pushing boundaries with creative solutions and cutting-edge approaches",
+    icon: <FaLightbulb />
   },
   {
-    title: 'Construction Administration',
-    description: 'During the construction period, we make ourselves available to the contractor to answer any questions and address any concerns they may have. We are involved during the construction to represent the owner and to respond to any contractor\'s issues, to conduct site observation visits, to monitor progress, to prepare any required change orders, to review shop drawings and pay applications.',
-    image: `${baseUrl}Our Strength/3b5325554b606533891f6419df582faa-crane.png`
+    title: "Technical Excellence",
+    description: "Delivering high-quality, scalable, and maintainable code",
+    icon: <FaRocket />
   },
   {
-    title: 'Interior Design',
-    description: 'Interior design completes the project and goes a long way in defining the image or identifying the structure. Our entire design team collaborates with the client in defining the image and how to achieve it in the selection of colours, materials, textures and other details.',
-    image: `${baseUrl}Our Strength/icon-3.png`
+    title: "Collaborative Approach",
+    description: "Working closely with teams to achieve shared goals",
+    icon: <FaUsers />
   },
   {
-    title: 'Entitlement',
-    description: 'We start out all projects identifying any jurisdiction requirements that may be placed on the project, including any public hearing that may be required for zoning, special use permits, zoning adjustments that may be desired or required. We define the capacity of the site, setbacks, zoning requirements and limitations to neighborhood associations, every location will have different requirements. Before any design work begins, the necessary due diligence is required.',
-    image: `${baseUrl}Our Strength/Layer 2.png`
-  },
-  {
-    title: 'Architectural Design',
-    description: 'The way we design does not follow a rigid formula or cookie cutter process, We question everything during the process and are always looking for better materials, methods and options. We work directly with the client in a collaborative effort to meet their needs and achieve their goals.',
-    image: `${baseUrl}Our Strength/backland+housing+PNGs.png`
-  },
-  {
-    title: 'Architectural Illustration',
-    description: 'There are a number of illustration techniques we utilize depending on the proposed purpose, from conceptual sketches to highly detailed and realistic rendering. A rendering can convey a concept or present an image of the finished project. They can also assist the client in obtaining financing, pre-leasing or attracting investors. That includes quick conceptual sketches, high quality photo realistic images, animated walk through/flyby\'s and massing study.',
-    image: `${baseUrl}Our Strength/Icons_Step-5-Home-Page.png`
+    title: "Results-Driven",
+    description: "Focused on delivering measurable impact and value",
+    icon: <FaChartLine />
   }
 ];
 
 const Strengths = () => {
   return (
-    <section 
-      id="strengths"
-      className="strengths-section"
-    >
-      <div className="parallax-background"></div>
-      <div className="floating-shapes">
-        <div className="shape shape-1"></div>
-        <div className="shape shape-2"></div>
-        <div className="shape shape-3"></div>
-      </div>
-
+    <section className="process-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">STRENGTHS</h2>
-          <p className="section-description">
-            Discover what sets us apart in the world of architecture and design.
-          </p>
+          <h2 className="section-title" style={{ textAlign: 'left' }}>STRENGTHS</h2>
+          <div className="section-description-wrapper">
+            <p className="section-description">
+              What sets me apart in delivering exceptional results
+            </p>
+          </div>
         </div>
-        
-        <div className="strengths-grid">
-          {strengths.map((strength, index) => (
-            <motion.div
-              key={index}
-              className="strength-card"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 0.6,
-                delay: index * 0.1
-              }}
-            >
-              <div className="strength-image-container">
-                <img 
-                  src={strength.image} 
-                  alt={strength.title} 
-                  className="strength-image"
-                  onError={(e) => {
-                    console.error(`Failed to load image: ${strength.image}`);
-                    e.currentTarget.style.display = 'none';
-                  }}
-                  onLoad={() => console.log(`Successfully loaded image: ${strength.image}`)}
-                />
-              </div>
-              <h3 className="strength-title">{strength.title}</h3>
-              <p>{strength.description}</p>
-            </motion.div>
-          ))}
+
+        <div className="strengths-content">
+          <motion.div 
+            className="strengths-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {strengths.map((strength, index) => (
+              <motion.div
+                key={index}
+                className="strength-card"
+                variants={itemVariants}
+              >
+                <div className="strength-icon">
+                  {strength.icon}
+                </div>
+                <h3 className="strength-title">{strength.title}</h3>
+                <p className="strength-description">{strength.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
