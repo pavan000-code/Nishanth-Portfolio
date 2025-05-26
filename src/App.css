@@ -866,20 +866,63 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .services-section {
-    padding: 80px 0;
+  .services-section,
+  .projects-section,
+  .about-section,
+  .contact-section,
+  .approach-section,
+  .strengths-section {
+    padding: 60px 0;
   }
 
-  .services-section .container {
-    padding: 0 20px;
+  .services-section .container,
+  .projects-section .container,
+  .about-section .container,
+  .contact-section .container,
+  .approach-section .container,
+  .strengths-section .container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
   }
 
-  .services-section .section-header {
+  .services-section .section-header,
+  .projects-section .section-header,
+  .about-section .section-header,
+  .contact-section .section-header,
+  .approach-section .section-header,
+  .strengths-section .section-header {
     margin-bottom: 40px;
+    text-align: left !important;
+    width: 100%;
+    padding: 0;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    text-align: left !important;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    left: -60px;
+    transform: none !important;
+    white-space: nowrap;
+  }
+
+  .services-section .section-description,
+  .projects-section .section-description,
+  .about-section .section-description,
+  .contact-section .section-description,
+  .approach-section .section-description,
+  .strengths-section .section-description {
+    font-size: 0.95rem !important;
+    text-align: left !important;
+    margin: 15px 0 0 0;
+    padding: 0 0 0 60px;
+    position: relative;
+    left: -60px;
   }
 
   .service-item {
@@ -892,13 +935,6 @@ a:hover {
 
   .service-features {
     grid-template-columns: 1fr;
-  }
-
-  .services-section .section-description {
-    font-size: 0.95rem !important;
-    padding-left: 1.2em !important;
-    margin-left: 0 !important;
-    text-align: left;
   }
 }
 
@@ -1756,7 +1792,7 @@ section {
   .contact-section,
   .approach-section,
   .strengths-section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .services-section .container,
@@ -1765,7 +1801,9 @@ section {
   .contact-section .container,
   .approach-section .container,
   .strengths-section .container {
-    padding: 0 20px;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
   }
 
   .services-section .section-header,
@@ -1775,12 +1813,22 @@ section {
   .approach-section .section-header,
   .strengths-section .section-header {
     margin-bottom: 40px;
-    text-align: center !important;
+    text-align: left !important;
+    width: 100%;
+    padding: 0;
   }
 
   .section-title {
-    font-size: 2.5rem;
-    text-align: center !important;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    text-align: left !important;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    left: -60px;
+    transform: none !important;
+    white-space: nowrap;
   }
 
   .services-section .section-description,
@@ -1790,9 +1838,11 @@ section {
   .approach-section .section-description,
   .strengths-section .section-description {
     font-size: 0.95rem !important;
-    text-align: center !important;
-    margin: 20px auto 0;
-    padding: 0;
+    text-align: left !important;
+    margin: 15px 0 0 0;
+    padding: 0 0 0 60px;
+    position: relative;
+    left: -60px;
   }
 }
 
@@ -1833,7 +1883,7 @@ section {
   z-index: 1;
   width: 100%;
   overflow-x: hidden;
-  padding-top: 120px;
+  padding-top: 0;
   transform: none !important;
   min-height: 100vh;
   isolation: isolate;

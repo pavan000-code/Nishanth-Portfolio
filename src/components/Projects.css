@@ -1,4 +1,4 @@
-.process-section {
+.about-section {
   padding: 100px 0;
   background-color: #000;
   color: #808080;
@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 
-.process-section .container {
+.about-section .container {
   padding: 0 100px;
   max-width: 100%;
   display: flex;
@@ -17,16 +17,16 @@
   align-items: flex-start;
 }
 
-.process-section .section-header {
+.about-section .section-header {
   text-align: left !important;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 0 100px;
+  padding: 0;
 }
 
-.process-section .section-title {
+.about-section .section-title {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
@@ -34,21 +34,23 @@
   text-align: left !important;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
-.process-section .section-description-wrapper {
+.about-section .section-description-wrapper {
   margin-top: 20px;
   width: 100%;
   text-align: left !important;
   padding: 0 !important;
 }
 
-.process-section .section-description {
+.about-section .section-description {
   font-size: 1.2rem;
   color: #808080;
   text-align: left !important;
   margin: 0;
   padding: 0;
+  max-width: 600px;
 }
 
 .section-header {
@@ -238,25 +240,28 @@
     padding: 0;
   }
 
-  .section-description {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    text-align: left;
+  .projects-section .section-header {
+    margin-bottom: 40px;
   }
-  
+
   .section-title {
     font-size: 1.8rem !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
     text-align: left;
   }
-  
-  .section-subtitle {
+
+  .about-section .section-description-wrapper {
+    padding-left: 0 !important;
+  }
+
+  .about-section .section-description-wrapper .section-description {
     font-size: 0.95rem !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
     text-align: left;
-    left: 0 !important;
+    position: relative;
+    left: -80px;
   }
   
   .project-filters {

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import AnimatedHeading from './AnimatedHeading';
 import './Projects.css';
-import { motion } from 'framer-motion';
 
 interface Project {
   id: number;
@@ -94,10 +93,10 @@ const Projects = () => {
       );
 
   return (
-    <section className="process-section">
+    <section className="about-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title" style={{ textAlign: 'left' }}>PROJECTS</h2>
+          <h2 className="section-title">PROJECTS</h2>
           <div className="section-description-wrapper">
             <p className="section-description">
               Explore our portfolio of award-winning designs across various categories.

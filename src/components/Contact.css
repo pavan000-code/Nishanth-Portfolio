@@ -7,41 +7,43 @@
 }
 
 .contact-section .container {
-  padding: 0;
+  padding: 0 100px;
   margin: 0;
   max-width: 100%;
 }
 
 .section-header {
-  text-align: center;
+  text-align: left;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 0 100px;
+  padding: 0;
 }
 
-.section-description {
+#contact .section-description {
   font-size: 1.2rem;
   color: #808080;
   max-width: 600px;
-  margin: 20px auto 0;
-  text-align: center;
-  padding: 0;
+  margin: 20px 0 0 0;
+  text-align: left;
+  padding: 0 0 0 50px;
   position: relative;
   left: 0;
   text-transform: none !important;
 }
 
-.section-title {
+#contact .section-title {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
   color: #fff;
-  text-align: center;
+  text-align: left;
   margin: 0;
   padding: 0;
   width: 100%;
+  position: relative;
+  left: 0;
 }
 
 .section-subtitle {
@@ -189,6 +191,48 @@
   transform: translateY(-2px);
 }
 
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.method-icon {
+  font-size: 1.2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.method-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.method-details h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.method-details a,
+.method-details p {
+  margin: 0;
+  color: #808080;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.method-details a:hover {
+  color: #fff;
+}
+
 @media (max-width: 992px) {
   .contact-content {
     grid-template-columns: 1fr;
@@ -205,7 +249,7 @@
   }
   
   .contact-section .container {
-    padding: 0;
+    padding: 0 20px;
   }
   
   .contact-info {
@@ -222,24 +266,28 @@
 
   .contact-content {
     gap: 30px;
+    align-items: center;
   }
-
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: 900;
+  
+  #contact .section-title {
+    font-size: 2rem;
     letter-spacing: -1px;
-    color: #fff;
-    text-align: left;
-    margin: 0;
+    text-align: left !important;
     padding: 0;
+    margin: 0;
     width: 100%;
     position: relative;
     left: 0;
+    transform: none !important;
+    white-space: nowrap;
   }
 
-  .section-description {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    text-align: left;
+  #contact .section-description {
+    font-size: 0.95rem !important;
+    text-align: left !important;
+    margin: 15px 0 0 0;
+    padding: 0 0 0 20px;
+    position: relative;
+    left: 0;
   }
 } 

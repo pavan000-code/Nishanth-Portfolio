@@ -17,7 +17,7 @@
   flex-direction: column;
 }
 
-.process-section .section-header {
+.process-section .section-content {
   text-align: left !important;
   margin: 0 0 60px 0;
   position: relative;
@@ -37,17 +37,10 @@
   width: 100%;
 }
 
-.process-section .section-description-wrapper {
-  margin-top: 20px;
-  width: 100%;
-  text-align: left !important;
-  padding: 0 !important;
-}
-
 .process-section .section-description {
   font-size: 1rem !important;
   color: #a0a0a0 !important;
-  margin: 0 !important;
+  margin: 20px 0 0 0 !important;
   max-width: 600px;
   line-height: 1.4 !important;
   font-weight: 400 !important;
@@ -320,56 +313,85 @@
 
 @media (max-width: 768px) {
   .process-section {
-    padding: 60px 0;
+    padding: 60px 0 !important;
   }
 
   .process-section .container {
-    padding: 0 20px;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
   }
 
-  .process-section .section-header {
-    padding: 0 20px;
+  .process-section .section-content {
+    padding: 0 !important;
+    margin: 0 0 40px 0 !important;
+    text-align: left !important;
+    width: 100% !important;
   }
 
   .process-section .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem !important;
+    letter-spacing: -1px !important;
     text-align: left !important;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  .process-section .section-description-wrapper {
     padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    position: relative !important;
+    left: -60px !important;
+    transform: none !important;
+    white-space: nowrap !important;
   }
 
   .process-section .section-description {
     font-size: 0.95rem !important;
-    padding-left: 3.9em !important;
-    margin-left: 0 !important;
-    text-indent: 0 !important;
+    margin: 15px 0 0 0 !important;
+    padding: 0 0 0 60px !important;
     text-align: left !important;
+    position: relative !important;
+    left: -60px !important;
   }
 
-  
+  .services-content {
+    position: relative !important;
+    left: -60px !important;
+    margin-top: 20px !important;
+  }
+
+  .services-list {
+    padding: 0 !important;
+  }
 
   .service-item {
-    padding: 15px 0 0 0;
+    padding: 10px 0 !important;
+  }
+
+  .service-header {
+    padding: 0 !important;
   }
 
   .service-title {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
     color: #fff !important;
   }
 
   .service-description-wrapper {
-    padding-left: 0;
-    margin-left: 0;
-    text-align: left;
+    padding-left: 0 !important;
   }
-  
+
+  .service-description {
+    font-size: 0.95rem !important;
+    padding: 0 !important;
+    margin: 8px 0 0 0 !important;
+  }
+
+  .service-features {
+    padding: 0 !important;
+    margin: 8px 0 0 0 !important;
+  }
+
   .service-features li {
-    padding-left: 0;
+    padding-left: 0 !important;
+    margin-bottom: 4px !important;
   }
 }
 

@@ -1,8 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLightbulb, FaRocket, FaUsers, FaChartLine } from 'react-icons/fa';
 import './Strengths.css';
-import { baseUrl } from '../utils/constants';
+
+const baseUrl = import.meta.env.BASE_URL;
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,41 +27,51 @@ const itemVariants = {
 interface Strength {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  image: string;
 }
 
 const strengths: Strength[] = [
   {
-    title: "Innovative Thinking",
-    description: "Pushing boundaries with creative solutions and cutting-edge approaches",
-    icon: <FaLightbulb />
+    title: "CONSTRUCTION DOCUMENT PRODUCTION",
+    description: "We construction documents are critical for a variety of reasons in the construction process to assure the design intent is clearly and concisely communicated and eventually for maintenance and repairs throughout the life of the structure. To achieve this level of clarity we prepare our documents with close coordination with various consultants, regular meetings and joint reviews and periodic quality control checks from start to completion.",
+    image: `${baseUrl}Our Strength/Layer 1.png`
   },
   {
-    title: "Technical Excellence",
-    description: "Delivering high-quality, scalable, and maintainable code",
-    icon: <FaRocket />
+    title: "CONSTRUCTION ADMINISTRATION",
+    description: "During the construction period, we make ourselves available to the contractor to answer any questions and address any concerns they may have. We are involved during the construction to represent the owner and to respond to any contractor's issues, to conduct site observation visits, to monitor progress, to prepare any required change orders, to review shop drawings and pay applications.",
+    image: `${baseUrl}Our Strength/Layer 2.png`
   },
   {
-    title: "Collaborative Approach",
-    description: "Working closely with teams to achieve shared goals",
-    icon: <FaUsers />
+    title: "INTERIOR DESIGN",
+    description: "Interior design completes the project and goes a long way in defining the image or identifying the structure. Our entire design team collaborates with the client in defining the image and how to achieve it in the selection of colours, materials, textures and other details.",
+    image: `${baseUrl}Our Strength/icon-3.png`
   },
   {
-    title: "Results-Driven",
-    description: "Focused on delivering measurable impact and value",
-    icon: <FaChartLine />
+    title: "ENTITLEMENT",
+    description: "We start out all projects identifying any jurisdiction requirements that may be placed on the project, including any public hearing that may be required for zoning, special use permits, zoning adjustments that may be desired or required. We define the capacity of the site, setbacks, zoning requirements and limitations to neighborhood associations, every location will have different requirements. Before any design work begins, the necessary due diligence is required.",
+    image: `${baseUrl}Our Strength/Icons_Step-5-Home-Page.png`
+  },
+  {
+    title: "ARCHITECTURAL DESIGN",
+    description: "The way we design does not follow a rigid formula or cookie cutter process, We question everything during the process and are always looking for better materials, methods and options. We work directly with the client in a collaborative effort to meet their needs and achieve their goals.",
+    image: `${baseUrl}Our Strength/Layer 1.png`
+  },
+  {
+    title: "ARCHITECTURAL ILLUSTRATION",
+    description: "There are a number of illustration techniques we utilize depending on the proposed purpose, from conceptual sketches to highly detailed and realistic rendering. A rendering can convey a concept or present an image of the finished project. They can also assist the client in obtaining financing, pre-leasing or attracting investors. That includes quick conceptual sketches, high quality photo realistic images, animated walk through/flyby's and massing study.",
+    image: `${baseUrl}Our Strength/Layer 2.png`
   }
 ];
 
 const Strengths = () => {
   return (
-    <section className="process-section">
+    <section className="about-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title" style={{ textAlign: 'left' }}>STRENGTHS</h2>
+          <h2 className="section-title">STRENGTHS</h2>
           <div className="section-description-wrapper">
             <p className="section-description">
-              What sets me apart in delivering exceptional results
+              Our core competencies that set us apart
             </p>
           </div>
         </div>
@@ -82,7 +91,14 @@ const Strengths = () => {
                 variants={itemVariants}
               >
                 <div className="strength-icon">
-                  {strength.icon}
+                  <img 
+                    src={strength.image} 
+                    alt={strength.title}
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${strength.image}`);
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
                 </div>
                 <h3 className="strength-title">{strength.title}</h3>
                 <p className="strength-description">{strength.description}</p>

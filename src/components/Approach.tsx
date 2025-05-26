@@ -25,10 +25,10 @@ const approaches = [
 
 const Approach = () => {
   return (
-    <section className="process-section">
+    <section className="about-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title" style={{ textAlign: 'left' }}>APPROACH</h2>
+          <h2 className="section-title">APPROACH</h2>
           <div className="section-description-wrapper">
             <p className="section-description">
               How we work to deliver exceptional results

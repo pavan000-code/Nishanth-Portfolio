@@ -17,7 +17,7 @@
   flex-direction: column;
 }
 
-.about-section .section-header {
+.about-section .section-content {
   text-align: left !important;
   margin: 0 0 60px 0;
   position: relative;
@@ -26,7 +26,7 @@
   padding: 0;
 }
 
-.about-section .section-title {
+.about-section .section-content .section-title {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
@@ -35,26 +35,19 @@
   margin: 0;
   padding: 0;
   width: 100%;
-}
-
-.about-section .section-description-wrapper {
-  margin-top: 20px;
-  width: 100%;
-  text-align: left !important;
-  padding: 0 0 0 2.5em !important;
+  position: relative;
+  left: 0;
+  transform: none !important;
 }
 
 .about-section .section-description {
-  font-size: 1rem !important;
-  color: #a0a0a0 !important;
-  margin: 0 !important;
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin: 20px 0 0 0;
   max-width: 600px;
-  line-height: 1.4 !important;
-  font-weight: 400 !important;
-  text-indent: 0 !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-  text-align: left !important;
+  line-height: 1.4;
+  font-weight: 400;
+  text-align: left;
 }
 
 .stages-wrapper {
@@ -114,11 +107,16 @@
   }
 
   .about-section .container {
-    padding: 0 20px;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
   }
 
-  .about-section .section-header {
-    padding: 0 20px;
+  .about-section .section-content {
+    padding: 0;
+    margin: 0 0 40px 0;
+    text-align: left !important;
+    width: 100%;
   }
 
   .stages-wrapper {
@@ -127,20 +125,26 @@
     gap: 10px;
   }
 
-  .about-section .section-title {
-    font-size: 2.5rem;
-  }
-
-  .about-section .section-description-wrapper {
-    padding: 0 !important;
+  .about-section .section-content .section-title {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    text-align: left !important;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    left: -60px;
+    transform: none !important;
+    white-space: nowrap;
   }
 
   .about-section .section-description {
-    font-size: 0.95rem !important;
-    padding-left: 1em !important;
-    margin-left: 0 !important;
-    text-indent: 0 !important;
-    text-align: left !important;
+    font-size: 0.95rem;
+    margin: 15px 0 0 0;
+    padding: 0 0 0 60px;
+    text-align: left;
+    position: relative;
+    left: -60px;
   }
 
   .stage {

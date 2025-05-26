@@ -1,4 +1,4 @@
-.process-section {
+.about-section {
   padding: 100px 0;
   background-color: #000;
   color: #808080;
@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 
-.process-section .container {
+.about-section .container {
   padding: 0 100px;
   max-width: 100%;
   display: flex;
@@ -17,16 +17,16 @@
   align-items: flex-start;
 }
 
-.process-section .section-header {
+.about-section .section-header {
   text-align: left !important;
   margin: 0 0 60px 0;
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 0 100px;
+  padding: 0;
 }
 
-.process-section .section-title {
+.about-section .section-title {
   font-size: 80px;
   font-weight: 900;
   letter-spacing: -1px;
@@ -34,21 +34,23 @@
   text-align: left !important;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
-.process-section .section-description-wrapper {
+.about-section .section-description-wrapper {
   margin-top: 20px;
   width: 100%;
   text-align: left !important;
-  padding: 0 !important;
+  padding: 0 0 0 2.5em !important;
 }
 
-.process-section .section-description {
+.about-section .section-description {
   font-size: 1.2rem;
   color: #808080;
   text-align: left !important;
   margin: 0;
   padding: 0;
+  max-width: 600px;
 }
 
 .approach-steps {
@@ -112,10 +114,9 @@
 
 .approach-step-line {
   position: absolute;
-  top: 50%;
-  left: 130%;
-  transform: translateX(-50%) translateY(-50%);
-  width: calc(90% + 10px); /* Original width + 30px on each side */
+  top: 30px; /* Half of the image height (60px) to center vertically */
+  left: 90%; /* Start 10% earlier */
+  width: 80px; /* Increased from 60px to 80px (60px + 20% for both sides) */
   height: 3px;
   background: #333;
   z-index: 1;
@@ -184,15 +185,15 @@
 }
 
 @media (max-width: 768px) {
-  .process-section {
+  .about-section {
     padding: 60px 20px;
   }
 
-  .process-section .container {
+  .about-section .container {
     padding: 0;
   }
 
-  .process-section .section-description {
+  .about-section .section-description {
     margin-left: 0 !important;
     text-align: left !important;
   }

@@ -1,5 +1,4 @@
 import { useState, FormEvent } from 'react';
-import AnimatedHeading from './AnimatedHeading';
 import './Contact.css';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
@@ -128,6 +127,7 @@ const Contact = () => {
             
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
+                <label htmlFor="name">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -139,6 +139,7 @@ const Contact = () => {
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="email">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -150,6 +151,7 @@ const Contact = () => {
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="subject">Subject</label>
                 <input
                   type="text"
                   id="subject"
@@ -161,6 +163,7 @@ const Contact = () => {
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="message">Message</label>
                 <textarea
                   id="message"
                   name="message"
