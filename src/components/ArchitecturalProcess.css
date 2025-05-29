@@ -70,7 +70,6 @@
   border-radius: 0;
   transition: all 0.3s ease;
   width: 100%;
-  border-bottom: 1px solid #333;
   justify-content: flex-start;
 }
 
@@ -120,9 +119,12 @@
   }
 
   .stages-wrapper {
-    padding: 0 20px;
+    padding: 0;
     margin-top: 20px;
     gap: 10px;
+    position: relative;
+    left: -60px;
+    width: calc(100% + 60px);
   }
 
   .about-section .section-content .section-title {
@@ -148,7 +150,8 @@
   }
 
   .stage {
-    padding: 10px 0;
+    padding: 10px 20px;
+    width: 100%;
   }
 
   .stage-icon {
@@ -162,5 +165,17 @@
 
   .stage-title {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stages-wrapper {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .stage {
+    margin-left: 0;
+    padding-left: 0;
   }
 }

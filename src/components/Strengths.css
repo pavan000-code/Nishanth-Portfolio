@@ -109,15 +109,16 @@
 }
 
 .strengths-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
   position: relative;
   z-index: 1;
   text-align: left;
   width: 100%;
-  max-width: 800px;
-  margin: 0;
-  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 100px;
 }
 
 .strength-card {
@@ -129,7 +130,7 @@
   backdrop-filter: blur(10px);
   width: 100%;
   text-align: left;
-  margin: 0 0 30px 0;
+  margin: 0;
 }
 
 .strength-card:not(:last-child) {
@@ -184,7 +185,8 @@
   }
 
   .strengths-grid {
-    padding: 0;
+    grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 
   .section-description {

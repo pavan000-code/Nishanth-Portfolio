@@ -34,15 +34,15 @@
 }
 
 .logo-image {
-  height: 40px;
-  width: 40px;
+  height: 65px;
+  width: 65px;
   object-fit: contain;
   display: block;
 }
 
 .logo span {
   color: #FFFFFF !important;
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -97,21 +97,21 @@
   }
 
   .logo-image {
-    height: 20px;
-    width: 20px;
-    min-width: 20px;
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
     display: block;
     flex-shrink: 0;
     object-fit: contain;
   }
 
   .logo span {
-    font-size: 0.7rem;
+    font-size: 1.3rem;
     white-space: normal;
     line-height: 1.2;
     text-align: left;
     word-wrap: break-word;
-    max-width: 100px;
+    max-width: 150px;
   }
 
   .nav {
@@ -233,13 +233,13 @@
 }
 
 .navbar-logo img {
-  height: 3.5rem;
+  height: 4.5rem;
   width: auto;
 }
 
 .navbar-logo span {
   color: #FFFFFF !important;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -377,5 +377,15 @@
 
   .navbar-logo img {
     height: 1.75rem;
+  }
+
+  .logo span {
+    font-size: 1.1rem;
+  }
+
+  .logo-image {
+    height: 35px;
+    width: 35px;
+    min-width: 35px;
   }
 } 

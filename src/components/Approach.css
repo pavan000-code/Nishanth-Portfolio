@@ -55,12 +55,16 @@
 
 .approach-steps {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  gap: 60px; /* Added spacing between items */
+  gap: 60px;
   margin-top: 60px;
   position: relative;
-  flex-wrap: wrap; /* Optional for better wrapping on medium screens */
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .approach-step {
@@ -70,7 +74,8 @@
   align-items: center;
   position: relative;
   min-width: 200px;
-  padding: 0 20px; /* Padding added to prevent text merging */
+  max-width: 300px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -124,15 +129,16 @@
 
 .approach-step-content {
   margin-top: 30px;
-  text-align: left;
+  text-align: center;
   padding: 0;
+  width: 100%;
 }
 
 .approach-step-title {
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
   padding: 0;
 }
 
@@ -142,10 +148,8 @@
   line-height: 1.5;
   margin: 0 auto;
   max-width: 260px;
-  text-align: justify;
+  text-align: center;
   padding: 0;
-
-  /* FIXES */
   word-spacing: 0.1em;
   hyphens: auto;
   overflow-wrap: break-word;

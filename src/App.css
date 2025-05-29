@@ -866,39 +866,24 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .services-section,
-  .projects-section,
-  .about-section,
-  .contact-section,
-  .approach-section,
-  .strengths-section {
+  .services-section {
     padding: 60px 0;
   }
 
-  .services-section .container,
-  .projects-section .container,
-  .about-section .container,
-  .contact-section .container,
-  .approach-section .container,
-  .strengths-section .container {
+  .services-section .container {
     padding: 0;
     margin: 0;
     max-width: 100%;
   }
 
-  .services-section .section-header,
-  .projects-section .section-header,
-  .about-section .section-header,
-  .contact-section .section-header,
-  .approach-section .section-header,
-  .strengths-section .section-header {
+  .services-section .section-header {
     margin-bottom: 40px;
     text-align: left !important;
     width: 100%;
     padding: 0;
   }
 
-  .section-title {
+  .services-section .section-title {
     font-size: 2rem;
     letter-spacing: -1px;
     text-align: left !important;
@@ -911,12 +896,7 @@ a:hover {
     white-space: nowrap;
   }
 
-  .services-section .section-description,
-  .projects-section .section-description,
-  .about-section .section-description,
-  .contact-section .section-description,
-  .approach-section .section-description,
-  .strengths-section .section-description {
+  .services-section .section-description {
     font-size: 0.95rem !important;
     text-align: left !important;
     margin: 15px 0 0 0;
@@ -925,16 +905,60 @@ a:hover {
     left: -60px;
   }
 
+  .services-content {
+    position: relative;
+    left: -60px;
+    width: calc(100% + 60px);
+    padding: 0;
+  }
+
+  .services-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
   .service-item {
     padding: 20px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .service-header {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .service-title {
+    font-size: 1.3rem;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    margin: 0;
+  }
+
+  .service-icon {
     font-size: 1.5rem;
+    margin-left: auto;
+  }
+
+  .service-description {
+    font-size: 0.95rem;
+    padding: 0;
+    margin: 10px 0;
   }
 
   .service-features {
-    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+
+  .service-features li {
+    padding-left: 0;
+    margin-bottom: 8px;
   }
 }
 
@@ -1843,6 +1867,28 @@ section {
     padding: 0 0 0 60px;
     position: relative;
     left: -60px;
+  }
+
+  /* Content spacing for all sections */
+  .services-content,
+  .projects-content,
+  .about-content,
+  .contact-content,
+  .approach-content,
+  .strengths-content {
+    position: relative;
+    left: -60px;
+    width: calc(100% + 60px);
+    padding: 0 20px;
+  }
+
+  .service-item,
+  .project-item,
+  .strength-card,
+  .approach-step,
+  .contact-info-item {
+    padding: 20px;
+    width: 100%;
   }
 }
 
