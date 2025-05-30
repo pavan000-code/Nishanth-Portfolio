@@ -1,39 +1,25 @@
 import { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
 import logoImage from '/slablogo.png';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setIsMenuOpen(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
     { href: '#home', text: 'Home' },
@@ -43,18 +29,18 @@ const Navbar = () => {
     { href: '#contact', text: 'Contact' }
   ];
 
-  return createPortal(
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+  return (
+    <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
           <a href="#home" onClick={closeMenu}>
             <img src={logoImage} alt="The Slab Design Studio Logo" />
-                <span>The Slab Design Studio</span>
+            <span>The Slab Design Studio</span>
           </a>
         </div>
-        
-        <button 
-          className={`hamburger ${isMenuOpen ? 'active' : ''}`} 
+
+        <button
+          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -75,9 +61,8 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>,
-    document.body
+    </nav>
   );
 };
 
-export default Navbar; 
+export default Navbar;
