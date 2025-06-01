@@ -426,11 +426,11 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
     width: 100%;
-    max-width: 350px;
+    max-width: none;
     box-sizing: border-box;
     margin-top: 8px;
     margin-bottom: 16px;
-    padding: 0 8px;
+    padding: 0 12px;
   }
 
   .service-features {
