@@ -1,185 +1,128 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AnimatedHeading from './AnimatedHeading';
 import './Projects.css';
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  client?: string;
-  location?: string;
-  year?: string;
-  detailUrl?: string;
-}
+// Import images directly
+import living6 from '/Projects/Living-6.jpg';
+import interior4 from '/Projects/interior 4.jpg';
+import project6 from '/Projects/6.jpg';
+import interior3 from '/Projects/interior 3.jpg';
+import project4 from '/Projects/4.jpg';
+import project3 from '/Projects/3.jpg';
 
-const projectsData: Project[] = [
+const projectImages = [
   {
-    id: 1,
-    title: "Modern Lakeside Villa",
-    description: "A contemporary residential project featuring clean lines, open spaces, and a harmonious connection with the surrounding nature.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["Residential", "Modern", "Interior Design"],
-    client: "Private Client",
-    location: "Lake Tahoe, CA",
-    year: "2022",
-    detailUrl: "#"
+    src: 'Projects/Living-6.jpg',
+    alt: 'Living Room Design'
   },
   {
-    id: 2, 
-    title: "Urban Office Complex",
-    description: "A sustainable corporate headquarters designed to foster collaboration, innovation, and employee well-being.",
-    image: "https://images.unsplash.com/photo-1545249390-6bdfa286032f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-    tags: ["Commercial", "Sustainable", "Office Space"],
-    client: "TechVision Inc.",
-    location: "Chicago, IL",
-    year: "2021",
-    detailUrl: "#"
+    src: 'Projects/interior 4.jpg',
+    alt: 'Interior Design 4'
   },
   {
-    id: 3,
-    title: "Luxurious Penthouse",
-    description: "An opulent penthouse apartment featuring custom designs, premium materials, and breathtaking city views.",
-    image: "https://images.unsplash.com/photo-1560448205-4d9b3e6bb6db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["Residential", "Luxury", "Interior Design"],
-    client: "Private Client",
-    location: "New York, NY",
-    year: "2023",
-    detailUrl: "#"
+    src: 'Projects/6.jpg',
+    alt: 'Project 6'
   },
   {
-    id: 4,
-    title: "Boutique Hotel Renovation",
-    description: "A complete revitalization of a historic building into a boutique hotel with a modern twist while preserving its original character.",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    tags: ["Hospitality", "Renovation", "Historical"],
-    client: "Heritage Hotels Group",
-    location: "Boston, MA",
-    year: "2020",
-    detailUrl: "#"
+    src: 'Projects/interior 3.jpg',
+    alt: 'Interior Design 3'
   },
   {
-    id: 5,
-    title: "Sustainable Community Center",
-    description: "A multi-functional community space designed with eco-friendly materials and energy-efficient systems.",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-    tags: ["Public", "Sustainable", "Community"],
-    client: "Greenville Municipality",
-    location: "Portland, OR",
-    year: "2021",
-    detailUrl: "#"
+    src: 'Projects/4.jpg',
+    alt: 'Project 4'
   },
   {
-    id: 6,
-    title: "Minimalist Beach House",
-    description: "A serene coastal retreat featuring minimalist design principles, natural materials, and panoramic ocean views.",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-    tags: ["Residential", "Minimalist", "Coastal"],
-    client: "Private Client",
-    location: "Malibu, CA",
-    year: "2022",
-    detailUrl: "#"
+    src: 'Projects/3.jpg',
+    alt: 'Project 3'
   }
 ];
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState<string>("all");
-  
-  const filteredProjects = activeFilter === "all" 
-    ? projectsData 
-    : projectsData.filter(project => 
-        project.tags.some(tag => tag.toLowerCase().includes(activeFilter.toLowerCase()))
-      );
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === projectImages.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? projectImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Auto-advance slides every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="about-section">
+      <div className="carousel-background">
+        <div className="carousel">
+          {projectImages.map((image, index) => (
+            <div
+              key={index}
+              className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
+              style={{
+                transform: `translateX(${(index - currentIndex) * 100}%)`
+              }}
+            >
+              <img 
+                src={image.src} 
+                alt={image.alt}
+                onError={(e) => {
+                  console.error(`Failed to load image: ${image.src}`);
+                  e.currentTarget.src = '/placeholder.jpg';
+                }}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="carousel-overlay"></div>
+        
+        <div className="carousel-controls">
+          <button 
+            type="button"
+            className="carousel-button prev" 
+            onClick={prevSlide}
+            aria-label="Previous slide"
+          >
+            &#10094;
+          </button>
+          
+          <button 
+            type="button"
+            className="carousel-button next" 
+            onClick={nextSlide}
+            aria-label="Next slide"
+          >
+            &#10095;
+          </button>
+
+          <div className="carousel-dots">
+            {projectImages.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                className={`dot ${index === currentIndex ? 'active' : ''}`}
+                onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">PROJECTS</h2>
           <div className="section-description-wrapper">
             <p className="section-description">
-              Explore our portfolio of award-winning designs across various categories.
+              Explore our portfolio of award-winning designs and architectural masterpieces.
             </p>
-          </div>
-        </div>
-        
-        <div className="projects-content">
-          <div className="project-filters">
-            <button 
-              className={activeFilter === "all" ? "active" : ""} 
-              onClick={() => setActiveFilter("all")}
-            >
-              All
-            </button>
-            <button 
-              className={activeFilter === "residential" ? "active" : ""} 
-              onClick={() => setActiveFilter("residential")}
-            >
-              Residential
-            </button>
-            <button 
-              className={activeFilter === "commercial" ? "active" : ""} 
-              onClick={() => setActiveFilter("commercial")}
-            >
-              Commercial
-            </button>
-            <button 
-              className={activeFilter === "interior" ? "active" : ""} 
-              onClick={() => setActiveFilter("interior")}
-            >
-              Interior Design
-            </button>
-            <button 
-              className={activeFilter === "sustainable" ? "active" : ""} 
-              onClick={() => setActiveFilter("sustainable")}
-            >
-              Sustainable
-            </button>
-          </div>
-          
-          <div className="projects-grid">
-            {filteredProjects.map((project) => (
-              <div className="project-card" key={project.id}>
-                <div className="project-image">
-                  <img src={project.image} alt={project.title} />
-                </div>
-                <div className="project-content">
-                  <AnimatedHeading 
-                    text={project.title} 
-                    className="project-title"
-                    tag="h3"
-                  />
-                  <p>{project.description}</p>
-                  <div className="project-meta">
-                    {project.location && (
-                      <div className="meta-item">
-                        <span className="meta-label">Location:</span>
-                        <span className="meta-value">{project.location}</span>
-                      </div>
-                    )}
-                    {project.year && (
-                      <div className="meta-item">
-                        <span className="meta-label">Year:</span>
-                        <span className="meta-value">{project.year}</span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="project-tags">
-                    {project.tags.map((tag, index) => (
-                      <span key={index} className="tag">{tag}</span>
-                    ))}
-                  </div>
-                  <div className="project-links">
-                    {project.detailUrl && (
-                      <a href={project.detailUrl} className="button">
-                        View Details
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
