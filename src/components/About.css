@@ -256,6 +256,8 @@
 
   .about-content {
     gap: 30px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
   .about-title {
