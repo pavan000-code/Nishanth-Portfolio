@@ -268,20 +268,21 @@
   }
 
   .about-subtitle {
-    color: #000000 !important;
-    margin-bottom: 4px;
-    text-transform: uppercase;
+    text-align: left !important;
+    margin-left: 0 !important;
+    letter-spacing: normal !important;
   }
 
-  .about-subtitle span {
-    text-transform: uppercase;
-  }
-
-  .about-subtitle span span {
-    text-transform: uppercase;
+  .about-subtitle span,
+  .about-subtitle > span > span {
+    margin: 0 !important;
+    padding: 0 !important;
+    letter-spacing: normal !important;
+    display: inline-block !important;
   }
 
   .about-text p {
     margin-bottom: 12px;
+    text-align: justify !important;
   }
 } 

@@ -355,19 +355,13 @@
     font-size: 2rem !important;
     letter-spacing: -1px !important;
     text-align: left !important;
-    padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
-    position: relative !important;
-    left: -60px !important;
-    transform: none !important;
-    white-space: nowrap !important;
   }
 
   .services-content {
-    position: relative !important;
-    left: -60px !important;
-    margin-top: 20px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .services-list,
@@ -398,6 +392,8 @@
   .service-item {
     flex-direction: column !important;
     align-items: flex-start !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
   .service-header {
@@ -460,6 +456,33 @@
     left: 0 !important;
     width: 100% !important;
     position: static !important;
+  }
+
+  .process-section .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .about-section,
+  .process-section,
+  .process-section .container,
+  .process-section .section-content,
+  .process-section .section-title,
+  .services-content,
+  .services-list,
+  .service-item {
+    padding-left: 16px !important;
+    margin-left: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .service-title {
+    text-align: left !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  .service-header {
+    justify-content: flex-start !important;
   }
 }
 
