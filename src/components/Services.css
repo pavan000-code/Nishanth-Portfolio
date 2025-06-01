@@ -383,18 +383,21 @@
   }
 
   .service-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 400px;
-    padding: 10px 0;
-    margin: 0 auto;
-    background: none;
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
 
   .service-header {
-    padding: 0 !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .service-content {
+    width: 100%;
+    margin-top: 8px;
   }
 
   .service-title {
