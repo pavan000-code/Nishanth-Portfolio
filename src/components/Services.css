@@ -370,16 +370,29 @@
     margin-top: 20px !important;
   }
 
-  .services-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .services-list,
+  .service-item,
+  .service-content {
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin: 0 auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .service-description {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     width: 100% !important;
-    max-width: 400px;
-    box-sizing: border-box;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 0 12px !important;
+    display: block !important;
   }
 
   .service-item {
@@ -395,19 +408,6 @@
     justify-content: space-between;
   }
 
-  .service-content {
-    width: 100%;
-    margin-top: 8px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
   .service-title {
     font-size: 1.1rem !important;
     color: #fff !important;
@@ -419,18 +419,6 @@
 
   .service-description-wrapper {
     padding-left: 0 !important;
-  }
-
-  .service-description {
-    text-align: left !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100%;
-    max-width: none;
-    box-sizing: border-box;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    padding: 0 12px;
   }
 
   .service-features {
@@ -459,6 +447,19 @@
     left: auto;
     right: auto;
     transform: none;
+  }
+
+  .services-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .services-content,
+  .service-item {
+    left: 0 !important;
+    width: 100% !important;
+    position: static !important;
   }
 }
 
