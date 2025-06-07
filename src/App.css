@@ -583,6 +583,18 @@ a:hover {
     max-width: 100% !important;
     text-align: center !important;
   }
+
+  .strengths-content .strength-icon {
+    width: 60px !important;
+    height: 60px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .strengths-content .strength-icon img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: contain !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1926,6 +1938,18 @@ section {
     padding: 20px;
     width: 100%;
   }
+
+  .strengths-content .strength-icon {
+    width: 60px !important;
+    height: 60px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .strengths-content .strength-icon img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: contain !important;
+  }
 }
 
 /* Global subheading styles */
@@ -1976,5 +2000,29 @@ section {
   position: relative;
   min-height: 100vh;
   isolation: isolate;
+}
+
+/* Hide scrollbar for all browsers */
+@media (max-width: 768px) {
+  * {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+  }
+
+  *::-webkit-scrollbar {
+    display: none !important;  /* Chrome, Safari and Opera */
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .app {
+    overflow-x: hidden !important;
+  }
+
+  section {
+    overflow-x: hidden !important;
+  }
 }
 

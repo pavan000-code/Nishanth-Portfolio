@@ -150,6 +150,8 @@
     text-align: left;
     position: relative;
     left: -60px;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
   }
 
   .stage {

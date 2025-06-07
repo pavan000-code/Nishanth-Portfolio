@@ -90,16 +90,15 @@ const Strengths = () => {
                 className="strength-card"
                 variants={itemVariants}
               >
-                <div className="strength-icon">
-                  <img 
-                    src={strength.image} 
-                    alt={strength.title}
-                    onError={(e) => {
-                      console.error(`Failed to load image: ${strength.image}`);
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
+                <img 
+                  src={strength.image} 
+                  alt={strength.title}
+                  className="strength-icon"
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${strength.image}`);
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
                 <h3 className="strength-title">{strength.title}</h3>
                 <p className="strength-description">{strength.description}</p>
               </motion.div>

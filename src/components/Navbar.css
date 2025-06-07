@@ -5,7 +5,11 @@
   right: 0;
   z-index: 9999;
   width: 100%;
-  background-color: #000000;
+  background: rgba(128, 128, 128, 0.6); /* semi-transparent gray */
+  backdrop-filter: blur(12px); /* glass effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-bottom: 1px solid rgba(255,255,255,0.18); /* subtle border */
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
   transform: none;
   will-change: auto;
   pointer-events: auto;
@@ -238,11 +242,16 @@
 
 .navbar {
   position: static;
-  background: transparent;
-  padding: 0.3rem 0;
-  height: 40px;
-  will-change: auto;
-  pointer-events: auto;
+  width: 100vw;
+  height: 70px;
+  background: rgba(128, 128, 128, 0.6); /* semi-transparent gray */
+  backdrop-filter: blur(12px); /* glass effect */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-bottom: 1px solid rgba(255,255,255,0.18); /* subtle border */
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
 }
 
 /* Remove all scroll-based classes */
@@ -253,13 +262,13 @@
 } */
 
 .navbar-container {
-  max-width: 100%;
+  background: transparent !important;
+  height: 100%;
   margin: 0;
   padding: 0 100px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  background: transparent;
+  justify-content: space-between;
 }
 
 .navbar-logo {

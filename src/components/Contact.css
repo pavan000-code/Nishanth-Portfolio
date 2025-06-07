@@ -250,26 +250,23 @@
   .contact-section .container {
     padding: 0 20px;
   }
-  .contact-info,
-  .contact-methods,
-  .contact-method,
-  .method-details,
-  .contact-form {
+  .contact-content .contact-info,
+  .contact-content .contact-methods,
+  .contact-content .contact-method,
+  .contact-content .method-details,
+  .contact-content .method-details h3,
+  .contact-content .method-details a,
+  .contact-content .method-details p {
+    text-align: left !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    text-align: left !important;
-    box-sizing: border-box !important;
-    width: 100% !important;
-    max-width: 100% !important;
   }
   .info-item {
     text-align: left !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
   }
   .contact-content {
     gap: 30px;
