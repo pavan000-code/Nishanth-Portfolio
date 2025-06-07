@@ -15,7 +15,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-image">
             <img 
-              src={`${baseUrl}Founder Pic.png`}
+              src={`${baseUrl}founder.jpg`}
               alt="The Slab Design Studio Founder" 
             />
             <div className="founder-caption">
