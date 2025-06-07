@@ -247,26 +247,38 @@
   .contact-section {
     padding: 60px 20px;
   }
-  
   .contact-section .container {
     padding: 0 20px;
   }
-  
-  .contact-info {
-    grid-template-columns: 1fr;
+  .contact-info,
+  .contact-methods,
+  .contact-method,
+  .method-details,
+  .contact-form {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
-  
   .info-item {
-    text-align: center;
+    text-align: left !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
-  
-  .social-links-contact {
-    justify-content: center;
-  }
-
   .contact-content {
     gap: 30px;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .social-links-contact {
+    justify-content: flex-start;
   }
   
   #contact .section-title {

@@ -446,43 +446,45 @@
   }
 
   .services-section {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
-  .services-content,
-  .service-item {
-    left: 0 !important;
-    width: 100% !important;
-    position: static !important;
-  }
-
-  .process-section .container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  .about-section,
-  .process-section,
-  .process-section .container,
-  .process-section .section-content,
-  .process-section .section-title,
   .services-content,
   .services-list,
-  .service-item {
-    padding-left: 16px !important;
+  .service-item,
+  .service-header,
+  .service-title {
+    padding-left: 0 !important;
     margin-left: 0 !important;
+    width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .service-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .service-header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
   }
 
   .service-title {
     text-align: left !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
     width: 100% !important;
     display: block !important;
   }
-  .service-header {
-    justify-content: flex-start !important;
+
+  .service-icon {
+    margin-left: 8px !important;
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
   }
 }
 

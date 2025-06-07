@@ -98,7 +98,7 @@ const Services = () => {
   };
 
   return (
-    <section className="about-section">
+    <section id = 'services' className="about-section">
       <div className="container">
         <div className="section-content">
           <h2 className="section-title">SERVICES</h2>

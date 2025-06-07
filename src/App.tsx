@@ -9,6 +9,7 @@ import About from './components/About'
 import Strengths from './components/Strengths'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         </div>
         <Footer />
       </main>
+      <ScrollToTop />
     </>
   )
 }
