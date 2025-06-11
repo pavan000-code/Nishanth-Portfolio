@@ -6,7 +6,26 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <h2>The Slab Design Studio</h2>
+            <h2
+              style={
+                window.innerWidth >= 768
+                  ? {
+                      fontSize: '100px',
+                      fontWeight: 900,
+                      textTransform: 'uppercase',
+                      color: '#fff',
+                      textAlign: 'left',
+                      margin: 0,
+                      padding: 0,
+                      width: '100%',
+                      letterSpacing: 0,
+                      fontFamily: "'Inter', 'Roboto', Arial, sans-serif"
+                    }
+                  : undefined
+              }
+            >
+              The Slab Design Studio
+            </h2>
             <p>Premium Architectural & Interior Design</p>
           </div>
           
@@ -48,11 +67,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="footer-bottom">
-          <p>&copy; {currentYear} The Slab Design Studio. All rights reserved.</p>
-          <p>123 Design Street, New York, NY 10001 | +1 (212) 555-1234</p>
         </div>
       </div>
     </footer>

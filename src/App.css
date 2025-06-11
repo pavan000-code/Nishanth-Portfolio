@@ -142,7 +142,7 @@ a:hover {
   right: 0 !important;
   z-index: 9999 !important;
   padding: 30px 0;
-  background-color: var(--dark-color);
+  background: transparent !important;
   width: 100vw !important;
   height: auto;
   margin: 0 !important;

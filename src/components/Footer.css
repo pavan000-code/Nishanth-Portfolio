@@ -57,4 +57,19 @@
   .footer-links {
     grid-template-columns: 1fr;
   }
+}
+
+@media (min-width: 768px) {
+  .footer .footer-logo h2 {
+    font-size: 100px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    letter-spacing: 0 !important;
+    font-family: 'Inter', 'Roboto', Arial, sans-serif !important;
+  }
 } 
