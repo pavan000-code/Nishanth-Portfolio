@@ -71,7 +71,7 @@ const Strengths = () => {
           <h2 className="section-title">STRENGTHS</h2>
           <div className="section-description-wrapper">
             <p className="section-description">
-              Our core competencies that set us apart
+              Our core competencies that set us apart.
             </p>
           </div>
         </div>

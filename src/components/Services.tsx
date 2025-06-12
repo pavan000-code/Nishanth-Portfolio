@@ -103,7 +103,7 @@ const Services = () => {
         <div className="section-content">
           <h2 className="section-title">SERVICES</h2>
           <p className="section-description">
-            Comprehensive solutions tailored to your needs
+            Comprehensive solutions tailored to your needs.
           </p>
         </div>
         

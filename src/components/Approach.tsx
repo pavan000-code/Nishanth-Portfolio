@@ -31,7 +31,7 @@ const Approach = () => {
           <h2 className="section-title">APPROACH</h2>
           <div className="section-description-wrapper">
             <p className="section-description">
-              How we work to deliver exceptional results
+              How we work to deliver exceptional results.
             </p>
           </div>
         </div>

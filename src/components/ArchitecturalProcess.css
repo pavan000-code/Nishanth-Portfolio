@@ -40,14 +40,17 @@
   transform: none !important;
 }
 
-.about-section .section-description {
-  font-size: 1rem;
+.about-section .section-content .section-description {
+  font-size: 2rem !important;
   color: #a0a0a0;
   margin: 20px 0 0 0;
-  max-width: 600px;
+  max-width: 50%;
   line-height: 1.4;
   font-weight: 400;
   text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
 }
 
 .stages-wrapper {
@@ -143,15 +146,17 @@
     white-space: nowrap;
   }
 
-  .about-section .section-description {
-    font-size: 0.95rem;
+  .about-section .section-content .section-description {
+    font-size: 1.2rem !important;
     margin: 15px 0 0 0;
     padding: 0 0 0 60px;
     text-align: left;
     position: relative;
-    left: -60px;
-    padding-left: 0 !important;
+    left: -30px;
+    padding-left: 30px !important;
     margin-left: 0 !important;
+    max-width: 340px !important;
+    width: 90vw;
   }
 
   .stage {

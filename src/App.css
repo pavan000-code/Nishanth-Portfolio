@@ -1440,10 +1440,40 @@ a:hover {
 }
 
 .footer-logo h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--light-color);
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .footer-logo h2:not(.section-title) {
+    font-size: 100px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    letter-spacing: 0 !important;
+    font-family: 'Inter', 'Roboto', Arial, sans-serif !important;
+    max-width: none !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo h2:not(.section-title) {
+    font-size: 2rem !important;
+    text-align: left !important;
+    text-transform: uppercase !important;
+    max-width: none !important;
+    display: block !important;
+  }
 }
 
 .footer-logo p {
@@ -1452,9 +1482,14 @@ a:hover {
 }
 
 .footer-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
   gap: 30px;
+  width: 100%;
+}
+
+.footer-social {
+  grid-column: 1 / -1;
 }
 
 .footer-nav h3,
@@ -1484,9 +1519,10 @@ a:hover {
   padding-left: 5px;
 }
 
-.social-links {
-  display: flex;
-  gap: 15px;
+.footer-social .social-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
 }
 
 .footer .social-links a {
@@ -1764,58 +1800,6 @@ section {
   flex-direction: column;
 }
 
-/* Remove these global section header styles */
-/* .services-section .section-header,
-.projects-section .section-header,
-.about-section .section-header,
-.contact-section .section-header,
-.approach-section .section-header,
-.strengths-section .section-header {
-  text-align: center !important;
-  margin: 0 0 60px 0;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 0;
-  display: block;
-} */
-
-/* Remove these global section title styles */
-/* .services-section .section-title,
-.projects-section .section-title,
-.about-section .section-title,
-.contact-section .section-title,
-.approach-section .section-title,
-.strengths-section .section-title {
-  font-size: 80px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  color: #ffffff;
-  text-align: center !important;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
-} */
-
-/* Remove these global section description styles */
-/* .services-section .section-description,
-.projects-section .section-description,
-.about-section .section-description,
-.contact-section .section-description,
-.approach-section .section-description,
-.strengths-section .section-description {
-  font-size: 1.2rem;
-  color: #5c5c5c;
-  max-width: 600px;
-  margin: 20px auto 0;
-  text-align: center !important;
-  padding: 0;
-  position: relative;
-  left: 0;
-  display: block;
-} */
-
 .services-content,
 .projects-content,
 .about-content,
@@ -1949,6 +1933,47 @@ section {
     width: 60px !important;
     height: 60px !important;
     object-fit: contain !important;
+  }
+
+  .strengths-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Center and pad each service/project/item card */
+  .services-list > *,
+  .projects-grid > *,
+  .about-content > *,
+  .contact-content > *,
+  .approach-content > *,
+  .strengths-content > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    max-width: none !important;
+  }
+
+  /* Center and pad ALL descendants inside main content blocks */
+  .about-content *,
+  .services-content *,
+  .projects-content *,
+  .contact-content *,
+  .approach-content *,
+  .strengths-content * {
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+    text-align: left !important;
   }
 }
 

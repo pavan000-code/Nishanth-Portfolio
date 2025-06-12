@@ -69,7 +69,7 @@ const Contact = () => {
         <div className="section-header">
           <h2 className="section-title">CONTACT</h2>
           <p className="section-description">
-            Let's discuss how we can work together
+            Let's discuss how we can work together.
           </p>
         </div>
 

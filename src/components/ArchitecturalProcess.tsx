@@ -29,7 +29,7 @@ const ArchitecturalProcess: React.FC = () => {
         <div className="section-content">
           <h2 className="section-title">DESIGN PROCESS</h2>
           <p className="section-description">
-            Our step-by-step approach to creating your perfect space
+            Our step-by-step approach to creating your perfect space.
           </p>
         </div>
         <div className="stages-wrapper">
