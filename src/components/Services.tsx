@@ -100,11 +100,13 @@ const Services = () => {
   return (
     <section id = 'services' className="about-section">
       <div className="container">
-        <div className="section-content">
+        <div className="section-header">
           <h2 className="section-title">SERVICES</h2>
-          <p className="section-description">
-            Comprehensive solutions tailored to your needs.
-          </p>
+          <div className="section-description-wrapper">
+            <p className="section-description">
+              Comprehensive solutions tailored to your needs.
+            </p>
+          </div>
         </div>
         
         <div className="services-content">

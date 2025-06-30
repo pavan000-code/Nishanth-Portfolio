@@ -26,11 +26,13 @@ const ArchitecturalProcess: React.FC = () => {
   return (
     <section className="about-section">
       <div className="container">
-        <div className="section-content">
+        <div className="section-header">
           <h2 className="section-title">DESIGN PROCESS</h2>
-          <p className="section-description">
-            Our step-by-step approach to creating your perfect space.
-          </p>
+          <div className="section-description-wrapper">
+            <p className="section-description">
+              Our step-by-step approach to creating your perfect space.
+            </p>
+          </div>
         </div>
         <div className="stages-wrapper">
           {stages.map((stage, index) => (
