@@ -15,6 +15,7 @@ const Navbar = () => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+      console.log('Scroll position:', scrollPosition);
       setIsScrolled(scrollPosition > 0);
     };
 
@@ -38,8 +39,15 @@ const Navbar = () => {
     { href: '#contact', text: 'Contact' }
   ];
 
+  console.log('isScrolled:', isScrolled);
+  const navClassName = `navbar ${isScrolled ? 'scrolled' : ''}`;
+  console.log('Navbar className:', navClassName);
+
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav
+      className={navClassName}
+      style={isScrolled ? { background: 'magenta', color: 'yellow', border: '5px solid lime', fontSize: 40 } : {}}
+    >
       <div className="navbar-background"></div>
       <div className="navbar-container">
         <div className="navbar-logo">

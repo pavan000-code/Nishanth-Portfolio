@@ -112,7 +112,7 @@ const Projects = () => {
               aria-label="Next slide"
             >
               →
-            </button>
+            </button>   
           </div>
 
           <div className="carousel-dots">
