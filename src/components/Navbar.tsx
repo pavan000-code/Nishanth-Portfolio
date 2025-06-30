@@ -32,7 +32,7 @@ const Navbar = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navLinks = [
-    { href: '#home', text: 'Home' },
+        { href: '#home', text: 'Home' },
     { href: '#about', text: 'About Us' },
     { href: '#services', text: 'Services' },
     { href: '#projects', text: 'Projects' },
@@ -61,10 +61,11 @@ const Navbar = () => {
           className={`hamburger ${isMenuOpen ? 'active' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
+          style={{ zIndex: 3000 }}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span style={{ background: 'red', width: 32, height: 4, display: 'block', margin: '6px 0' }}></span>
+          <span style={{ background: 'red', width: 32, height: 4, display: 'block', margin: '6px 0' }}></span>
+          <span style={{ background: 'red', width: 32, height: 4, display: 'block', margin: '6px 0' }}></span>
         </button>
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>

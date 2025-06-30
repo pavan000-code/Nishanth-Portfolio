@@ -27,7 +27,7 @@
     background: rgba(30, 30, 30, 0.25) !important;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(80, 80, 80, 0.37);
     transition: background 0.3s, backdrop-filter 0.3s;
     border-bottom: none !important;
   }
@@ -35,7 +35,7 @@
     background: rgba(30, 30, 30, 0.25) !important;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(80, 80, 80, 0.37);
     transition: background 0.3s, backdrop-filter 0.3s;
     border-bottom: none !important;
   }
@@ -61,6 +61,8 @@
   align-items: center;
   text-decoration: none;
   gap: 15px;
+  background: none !important;
+  background-color: transparent !important;
 }
 
 .navbar-logo img {
@@ -68,6 +70,8 @@
   width: 80px;
   object-fit: contain;
   display: block;
+  background: none !important;
+  background-color: transparent !important;
 }
 
 .navbar-logo span {
@@ -119,13 +123,18 @@
     background: rgba(30, 30, 30, 0.25) !important;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(80, 80, 80, 0.37);
     transition: background 0.3s, backdrop-filter 0.3s;
     border-bottom: none !important;
   }
 
   .navbar-container {
-    padding: 0 10px;
+    padding: 0 10px !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    position: relative !important;
   }
 
   .navbar-logo img {
@@ -138,19 +147,27 @@
   }
 
   .navbar-logo a {
-    gap: 8px;
+    gap: 4px !important;
   }
 
   .hamburger {
-    display: block;
-    padding: 0.2rem;
-    margin-left: 5px;
+    position: absolute !important;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    z-index: 2000;
   }
 
   .hamburger span {
-    width: 20px;
-    height: 2px;
-    margin: 3px 0;
+    background: #fff !important;
+    width: 20px !important;
+    height: 2px !important;
+    margin: 3px 0 !important;
+    border-radius: 2px;
+    display: block;
+    transition: all 0.3s;
   }
 
   .hamburger.active span:nth-child(1) {
