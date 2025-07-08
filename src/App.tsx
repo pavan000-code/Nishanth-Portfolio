@@ -16,30 +16,30 @@ function App() {
     <>
       <Navbar />
       <main className="app">
-        <div>
+        <section className="hero-section">
           <Hero />
-        </div>
-        <div>
+        </section>
+        <section className="section-spacing">
           <ArchitecturalProcess />
-        </div>
-        <div>
+        </section>
+        <section className="section-spacing">
           <Services />
-        </div>
-        <div>
+        </section>
+        <section className="section-spacing">
           <Projects />
-        </div>
-        <div>
+        </section>
+        <section className="section-spacing">
           <Approach />
-        </div>
-        <div>
+        </section>
+        <section className="section-spacing">
           <About />
-        </div>
-        <div>
+        </section>
+        <section className="section-spacing">
           <Strengths />
-        </div>
-        <div>
+        </section>
+        <section className="section-spacing">
           <Contact />
-        </div>
+        </section>
         <Footer />
       </main>
       <ScrollToTop />

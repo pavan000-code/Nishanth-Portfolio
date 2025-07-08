@@ -1,5 +1,5 @@
 .about-section {
-  padding: 100px 0;
+  padding: 0;
   background-color: #000;
   color: #808080;
   position: relative;
@@ -19,7 +19,7 @@
 
 .about-section .section-header {
   text-align: left !important;
-  margin: 0 0 60px 0;
+  margin: 0 0 0 0;
   position: relative;
   z-index: 1;
   width: 100%;
@@ -58,7 +58,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
-  margin-top: 60px;
+  margin-top: 0;
   position: relative;
   flex-wrap: wrap;
   width: 100%;
@@ -169,7 +169,7 @@
 
 .approach-intro {
   text-align: left;
-  margin-bottom: 60px;
+  margin-bottom: 0;
 }
 
 .approach-tagline {
@@ -190,7 +190,7 @@
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 60px 20px;
+    padding: 0;
   }
 
   .about-section .container {
