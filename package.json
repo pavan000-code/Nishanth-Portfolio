@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pavan000-code.github.io/Nishanth-Portfolio",
+  "homepage": "https://theslabdesign.studio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
